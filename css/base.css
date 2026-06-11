@@ -1,0 +1,37 @@
+/* BASE.CSS — Sejarah Penebusan */
+:root {
+  --black:    #232323;
+  --white:    #ffffff;
+  --offwhite: #faf5ee;
+  --tosca:    #00a69c;
+  --tosca-dk: #007a72;
+  --orange:   #ffb600;
+  --gray:     #666666;
+  --border:   #e0e0e0;
+  --pad:      1.25rem;
+  --max:      430px;
+}
+
+@font-face { font-family:'Arial Black'; src:url('../assets/fonts/Arial_Black.ttf'); font-weight:900; font-display:swap; }
+@font-face { font-family:'Arial'; src:url('../assets/fonts/Arial.ttf'); font-weight:400; font-display:swap; }
+@font-face { font-family:'Arial'; src:url('../assets/fonts/Arial_Bold.ttf'); font-weight:700; font-display:swap; }
+@font-face { font-family:'Avenir'; src:url('../assets/fonts/Avenir_Roman.otf') format('opentype'); font-weight:400; font-display:swap; }
+
+*,*::before,*::after { box-sizing:border-box; margin:0; padding:0; }
+html { font-size:16px; scroll-behavior:smooth; -webkit-text-size-adjust:100%; }
+body { font-family:Arial,sans-serif; color:var(--black); background:var(--offwhite); line-height:1.6; -webkit-font-smoothing:antialiased; }
+img { max-width:100%; height:auto; display:block; }
+a { color:inherit; text-decoration:none; }
+ul { list-style:none; }
+
+.wrap { width:100%; max-width:var(--max); margin:0 auto; padding:0 var(--pad); }
+
+/* BUTTONS */
+.btn { display:inline-flex; align-items:center; justify-content:center; font-family:Arial,sans-serif; font-size:.9rem; font-weight:700; padding:.7rem 1.6rem; border-radius:999px; border:2px solid transparent; cursor:pointer; transition:opacity .18s; }
+.btn-orange  { background:var(--orange); color:var(--black); border-color:var(--orange); }
+.btn-outline-white { background:transparent; color:var(--white); border-color:var(--white); }
+.btn-outline-white:hover { background:var(--white); color:var(--black); }
+.btn-w { width:100%; }
+
+/* Eyebrow label */
+.eyebrow { font-family:'Avenir',Arial,sans-serif; font-size:.65rem; font-weight:400; letter-spacing:.15em; text-transform:uppercase; }
