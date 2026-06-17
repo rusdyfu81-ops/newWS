@@ -1,0 +1,214 @@
+/* ============================================================
+   DESKTOP.CSS — Sejarah Penebusan
+   Layout mobile-first sudah di layout.css. File ini menambahkan
+   tampilan tablet & desktop tanpa mengubah versi mobile.
+   ============================================================ */
+
+/* ---------- Base untuk elemen baru (berlaku di semua ukuran) ---------- */
+
+/* Menu & aksi navbar hanya muncul di desktop */
+.nav-menu,
+.nav-actions { display:none; }
+
+/* About — pengganti inline-style lama agar bisa diatur responsif */
+.about-photo-col { position:relative; margin-top:1.5rem; }
+.about-photo-main {
+  width:100%; max-height:320px;
+  object-fit:cover; object-position:top center;
+  border-radius:8px; display:block;
+}
+.about-photo-btn { position:absolute; bottom:1rem; right:1rem; }
+
+/* Baris copyright footer (mobile & desktop) */
+.footer-copy {
+  border-top:1px solid rgba(255,255,255,.15);
+  margin-top:2rem; padding:1.25rem 0 .5rem;
+  font-size:.75rem; opacity:.78; text-align:center;
+}
+.footer-copy a { color:var(--orange); }
+
+/* ============================================================
+   TABLET  (≥ 680px)
+   ============================================================ */
+@media (min-width:680px) {
+  .wrap { max-width:640px; }
+
+  .journey-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:1.75rem 2.5rem; }
+  .jitem { margin-bottom:0; }
+
+  .pilar-grid  { display:grid; grid-template-columns:1fr 1fr; gap:2rem; }
+  .pilar-item:nth-child(3) { grid-column:1 / -1; }
+  .pilar-item { margin-bottom:0; }
+
+  .howlearn-grid { grid-template-columns:repeat(3,1fr); }
+
+  .pricing-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; align-items:start; }
+  .pcard { margin-bottom:0; }
+  .pricing-grid .pcard:nth-child(3) { grid-column:1 / -1; max-width:320px; }
+}
+
+/* ============================================================
+   DESKTOP  (≥ 1024px)
+   ============================================================ */
+@media (min-width:1024px) {
+
+  .wrap { max-width:1180px; padding-left:40px; padding-right:40px; }
+
+  /* ---------- NAVBAR ---------- */
+  .nav { padding:1rem max(40px, calc((100% - 1180px) / 2)); }
+  .nav-logo { height:40px; }
+  .nav-hamburger { display:none; }
+
+  .nav-menu {
+    display:flex; align-items:center; gap:1.7rem;
+    list-style:none; margin:0 auto 0 2.5rem;
+  }
+  .nav-menu a {
+    color:var(--white); font-size:.82rem; font-weight:700;
+    text-transform:uppercase; letter-spacing:.04em; opacity:.92;
+    transition:opacity .15s;
+  }
+  .nav-menu a:hover { opacity:1; }
+  .nav-menu .nav-search { font-size:1.25rem; line-height:1; }
+
+  .nav-actions { display:flex; align-items:center; gap:1.4rem; }
+  .nav-auth, .nav-lang { color:var(--white); font-size:.8rem; font-weight:700; opacity:.95; }
+  .nav-auth:hover { text-decoration:underline; }
+
+  /* ---------- HERO ---------- */
+  .hero { padding:0; }
+  .hero-inner {
+    display:flex; align-items:center; gap:3.5rem;
+    max-width:1180px; margin:0 auto; padding:4.5rem 40px 5rem;
+  }
+  .hero-text { flex:1 1 56%; max-width:none; padding:0; }
+  .hero-title { font-size:3.7rem; line-height:1.02; margin-bottom:1.25rem; }
+  .hero-sub   { font-size:1rem; max-width:30rem; margin-bottom:1.75rem; }
+  .hero-btns  { margin-bottom:2.25rem; }
+  .hero-stats { gap:2.75rem; margin-bottom:0; }
+  .hstat-val  { font-size:2.4rem; }
+  .hstat-lbl  { font-size:.78rem; }
+
+  .hero-book-area {
+    flex:0 1 40%;
+    background:transparent; margin:0; padding:0; border-radius:0;
+    align-items:center;
+  }
+  .hero-book-img { width:300px; }
+  .hero-book-img-ph { width:300px; height:400px; }
+  .hero-book-label { width:100%; max-width:320px; padding:1.5rem 0 0; text-align:left; }
+  .hero-book-label .lbl-series { font-size:1rem; }
+  .hero-book-label .lbl-title  { font-size:.875rem; }
+
+  /* ---------- ABOUT ---------- */
+  .about { padding:5rem 0; }
+  .about-title { font-size:3rem; margin-bottom:2.25rem; }
+  .about-grid {
+    display:grid; grid-template-columns:320px 1fr;
+    gap:3rem; align-items:start;
+  }
+  .about-photo-col { order:-1; margin-top:0; }
+  .about-photo-main { max-height:none; }
+  .about-name { font-size:1.2rem; margin-bottom:.3rem; }
+  .about-dates { font-size:.95rem; margin-bottom:1.25rem; }
+  .about-bio { font-size:.95rem; margin-bottom:0; }
+
+  /* ---------- JOURNEY ---------- */
+  .journey { padding:5rem 0; }
+  .journey-title { font-size:2.6rem; }
+  .journey-sub { max-width:48rem; margin-bottom:0; }
+  .journey-grid {
+    display:grid; grid-template-columns:repeat(4,1fr);
+    gap:2.5rem; margin-top:3.5rem; position:relative;
+  }
+  .journey-grid::before {
+    content:''; position:absolute; top:27px; left:12.5%; right:12.5%;
+    height:2px; background:var(--tosca); opacity:.22; z-index:0;
+  }
+  .jitem {
+    flex-direction:column; align-items:center; text-align:center;
+    gap:1rem; margin-bottom:0; position:relative; z-index:1;
+  }
+  .jitem-icon-img { width:56px; height:56px; }
+  .jitem-title { font-size:1.05rem; margin-bottom:.4rem; }
+  .jitem-desc { font-size:.85rem; }
+
+  /* ---------- PILLARS ---------- */
+  .pillars { padding:5rem 0; }
+  .pillars-title { font-size:3rem; margin-bottom:3rem; }
+  .pilar-grid {
+    display:grid; grid-template-columns:repeat(3,1fr); gap:3rem;
+  }
+  .pilar-item:nth-child(3) { grid-column:auto; }
+  .pilar-item { margin-bottom:0; }
+  .pilar-name { font-size:1.35rem; }
+  .pilar-desc { font-size:.9rem; }
+
+  /* ---------- HOWLEARN ---------- */
+  .howlearn { padding:5rem 0; }
+  .howlearn-head {
+    display:flex; justify-content:space-between; align-items:flex-end;
+    gap:3rem; margin-bottom:2.5rem;
+  }
+  .howlearn-title { font-size:2.6rem; margin-bottom:0; }
+  .howlearn-sub { max-width:23rem; margin-bottom:.3rem; text-align:right; }
+  .howlearn-grid { grid-template-columns:repeat(6,1fr); gap:1.1rem; }
+  .hbox { padding:1.25rem .9rem; }
+  .hbox-title { font-size:.85rem; }
+  .howlearn-cta { text-align:left; margin-top:2rem; }
+
+  /* ---------- PRICING ---------- */
+  .pricing { padding:5rem 0; }
+  .pricing-title { font-size:2.6rem; }
+  .pricing-sub { max-width:40rem; }
+  .pricing-grid {
+    display:grid; grid-template-columns:repeat(3,1fr);
+    gap:2rem; align-items:start;
+  }
+  .pricing-grid .pcard:nth-child(3) { grid-column:auto; max-width:none; }
+  .pcard { margin-bottom:0; padding:2rem 1.75rem; }
+  .pcard-tosca {
+    transform:translateY(-14px);
+    box-shadow:0 22px 45px rgba(0,122,114,.28);
+  }
+
+  /* ---------- KOMUNITAS + EVENTS (2 kolom) ---------- */
+  .community-events {
+    display:grid; grid-template-columns:1.15fr 1fr;
+    max-width:1180px; margin:0 auto;
+  }
+  .community-events .komunitas,
+  .community-events .events { padding:4.5rem 3rem; }
+  .community-events .wrap {
+    max-width:none; width:auto; padding:0; margin:0;
+  }
+  .komunitas-title { font-size:2.4rem; }
+  .events-title { font-size:2.4rem; }
+  .kitem { margin-bottom:1.75rem; }
+
+  /* ---------- CTA FINAL ---------- */
+  .ctafinal { padding:5.5rem 0; }
+  .ctafinal .wrap { text-align:center; }
+  .ctafinal-title { font-size:2.9rem; }
+  .ctafinal-desc { max-width:40rem; margin-left:auto; margin-right:auto; }
+  .ctafinal-btns { flex-direction:row; justify-content:center; gap:1rem; }
+  .ctafinal-btns .btn-tosca-solid,
+  .ctafinal-btns .btn-orange-solid { width:auto; margin-bottom:0; padding:.8rem 2.5rem; }
+
+  /* ---------- FOOTER ---------- */
+  .footer { padding:4.5rem 0 0; }
+  .footer-grid {
+    display:grid; grid-template-columns:1.5fr 1fr 1.4fr; gap:3.5rem;
+  }
+  .footer-desc { margin-bottom:1.5rem; }
+  .footer-copy { margin-top:3rem; padding:1.5rem 0; }
+}
+
+/* ============================================================
+   LAYAR SANGAT LEBAR (≥ 1400px) — sedikit lega
+   ============================================================ */
+@media (min-width:1400px) {
+  .wrap { max-width:1240px; }
+  .hero-inner,
+  .community-events { max-width:1240px; }
+}
