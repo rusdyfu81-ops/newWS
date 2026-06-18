@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Masuk — Sejarah Penebusan</title>
+  <link rel="stylesheet" href="css/base.css"/>
+  <link rel="stylesheet" href="css/auth.css"/>
+</head>
+<body class="auth-page">
+<svg class="auth-leaves" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <g fill="#15b3a7">
+    <path d="M60 40 C110 60 120 140 70 190 C40 130 30 70 60 40 Z"/>
+    <path d="M150 120 C200 140 210 220 160 270 C130 210 120 150 150 120 Z"/>
+    <path d="M20 150 C70 160 90 230 50 280 C20 230 10 185 20 150 Z"/>
+    <circle cx="120" cy="80" r="26"/>
+    <circle cx="60" cy="250" r="20"/>
+    <circle cx="180" cy="210" r="16"/>
+  </g>
+</svg>
+<div class="auth-inner">
+  <a href="index.html"><img src="assets/images/logo_sp_white.png" alt="Sejarah Penebusan" class="auth-logo"/></a>
+
+  <h1 class="auth-title">Great to have<br>you back!</h1>
+  <p class="auth-lead">Masuk untuk melanjutkan perjalanan belajar Anda — akses video, audio, tools interaktif, dan kelas komunitas.</p>
+
+  <form id="login-form" novalidate>
+    <div class="auth-field">
+      <div class="auth-row">
+        <label class="auth-label" for="email">Email</label>
+        <label class="auth-aux auth-remind"><input type="checkbox" id="remember"/> Ingat saya</label>
+      </div>
+      <input class="auth-input" type="email" id="email" autocomplete="email" placeholder="nama@email.com"/>
+    </div>
+
+    <div class="auth-field">
+      <div class="auth-row">
+        <label class="auth-label" for="password">Password</label>
+        <a href="#" class="auth-aux" id="forgot-link">Forgot</a>
+      </div>
+      <input class="auth-input" type="password" id="password" autocomplete="current-password" placeholder="Password"/>
+    </div>
+
+    <p class="auth-msg" id="auth-msg"></p>
+
+    <div class="auth-actions">
+      <button type="submit" class="btn-submit">Submit</button>
+    </div>
+  </form>
+
+  <p class="auth-alt">New here? <a href="signup.html">Create an account</a></p>
+  <p class="auth-terms">By signing in, you agree to our <a href="#">Terms &amp; policies</a>.</p>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/sp-config.js"></script>
+<script src="js/sp-auth.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

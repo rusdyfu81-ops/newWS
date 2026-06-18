@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Dashboard — Sejarah Penebusan</title>
+  <link rel="stylesheet" href="css/base.css"/>
+  <link rel="stylesheet" href="css/layout.css"/>
+  <link rel="stylesheet" href="css/desktop.css"/>
+  <link rel="stylesheet" href="css/dashboard.css"/>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html"><img src="assets/images/logo_sp_white.png" alt="Sejarah Penebusan" class="nav-logo"/></a>
+  <ul class="nav-menu">
+    <li><a href="buku.html">Buku</a></li>
+    <li><a href="index.html#perjalanan">Belajar</a></li>
+    <li><a href="komunitas.html">Komunitas</a></li>
+    <li><a href="index.html#events">Event</a></li>
+    <li><a href="tentang.html">Tentang</a></li>
+    <li><a href="#" class="nav-search" aria-label="Cari">&#9099;</a></li>
+  </ul>
+  <div class="nav-actions">
+    <a href="#" class="nav-logout" id="logout-btn">Keluar</a>
+    <span class="nav-lang">&#127470;&#127465; Indonesia</span>
+  </div>
+  <div class="nav-hamburger" aria-label="Menu"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- HEADER PROFIL -->
+<section class="dash-head">
+  <div class="dash-head-inner">
+    <div class="dash-avatar-ph" id="u-avatar">Foto Profil</div>
+    <h1 class="dash-name" id="u-name">RINI SUSANTO</h1>
+    <p class="dash-role" id="u-role">+ Pelajar</p>
+    <div class="dash-progress">
+      <div class="dash-bar"><span id="u-progress-bar"></span></div>
+      <p class="dash-progress-label" id="u-progress-label">3/8 buku &middot; 37%</p>
+    </div>
+    <div class="dash-stats">
+      <div><div class="dash-stat-val" id="stat-books">03</div><div class="dash-stat-lbl">Buku Dimiliki</div></div>
+      <div><div class="dash-stat-val" id="stat-videos">14</div><div class="dash-stat-lbl">Video Ditonton</div></div>
+      <div><div class="dash-stat-val" id="stat-hours">8h</div><div class="dash-stat-lbl">Total Belajar</div></div>
+      <div><div class="dash-stat-val" id="stat-worksheets">03</div><div class="dash-stat-lbl">Worksheet</div></div>
+    </div>
+    <p class="dash-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+  </div>
+</section>
+
+<!-- LANJUTKAN BELAJAR -->
+<section class="dash-section dash-resume">
+  <div class="wrap">
+    <h2 class="dash-sec-title"><span class="ico">&#127891;</span> Lanjutkan Belajar</h2>
+    <div class="resume-card">
+      <p class="resume-meta" id="resume-meta">Vol. 1 &middot; Episode 5 dari 12</p>
+      <p class="resume-title" id="resume-title">Protoevangelium: Janji Keselamatan Pertama</p>
+      <p class="resume-sub" id="resume-sub">Video &middot; 38 menit tersisa</p>
+      <div class="resume-bar"><span id="resume-bar"></span></div>
+      <p class="resume-pct" id="resume-pct">35% selesai</p>
+      <button class="resume-play" aria-label="Putar">&#9654;</button>
+    </div>
+  </div>
+</section>
+
+<!-- BUKU SAYA -->
+<section class="dash-section dash-mybooks">
+  <div class="wrap">
+    <h2 class="dash-sec-title"><span class="ico">&#128214;</span> Buku Saya</h2>
+    <div class="mybooks-grid" id="mybooks-grid"></div>
+    <div class="dash-dots"><span class="active"></span><span></span><span></span></div>
+    <div class="dash-more"><button class="btn-hero-orange">Lihat Lebih</button></div>
+  </div>
+</section>
+
+<!-- EVENT & KELAS -->
+<section class="dash-events">
+  <div class="wrap">
+    <h2 class="dash-sec-title"><span class="ico">&#128197;</span> Event &amp; Kelas</h2>
+      <div class="ecard-new">
+        <div class="ecard-date-block"><div class="ecard-date-num">02</div><div class="ecard-date-mon">JUN</div></div>
+        <div class="ecard-body">
+          <p class="ecard-title-new">Kelas Live: Memahami Perjanjian Lama</p>
+          <p class="ecard-location">Zoom &middot; 19:00 WIB</p>
+          <span class="ecard-badge ecard-badge--member">Untuk member</span>
+        </div>
+      </div>
+      <div class="ecard-new">
+        <div class="ecard-date-block"><div class="ecard-date-num">15</div><div class="ecard-date-mon">JUN</div></div>
+        <div class="ecard-body">
+          <p class="ecard-title-new">Seminar: Sejarah Penebusan dalam Perjanjian Baru</p>
+          <p class="ecard-location">Jakarta &middot; 09:00 WIB &middot; Terbuka untuk umum</p>
+          <span class="ecard-badge ecard-badge--public">Terbuka untuk umum</span>
+        </div>
+      </div>
+      <div class="ecard-new">
+        <div class="ecard-date-block"><div class="ecard-date-num">30</div><div class="ecard-date-mon">JUN</div></div>
+        <div class="ecard-body">
+          <p class="ecard-title-new">Kelas Live: Tools Belajar Mandiri — Sesi Praktik</p>
+          <p class="ecard-location">YouTube Live &middot; 19:00 WIB</p>
+          <span class="ecard-badge ecard-badge--free">Gratis untuk semua</span>
+        </div>
+      </div>
+    <div class="dash-more" style="margin-top:1.5rem"><button class="btn-hero-orange">Lihat Lebih</button></div>
+  </div>
+</section>
+
+<footer class="footer" id="kontak">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-col footer-col--brand">
+        <div class="footer-logo-wrap"><img src="assets/images/logo_sp.png" alt="Sejarah Penebusan" class="footer-logo-icon"/></div>
+        <p class="footer-desc">Lorem ipsum dolor sit amet, consectetur moon el adipiscing elit, sed do eiusmod tempor incididunt ut labore et doloe magna aliqua.</p>
+        <p class="footer-section-title">Follow Us</p>
+        <div class="footer-social"><a href="#">f</a><a href="#">&#120143;</a><a href="#">&#119823;</a><a href="#">&#8853;</a><a href="#">G+</a></div>
+      </div>
+      <div class="footer-col footer-col--contact">
+        <p class="footer-section-title">Contact Info</p>
+        <div class="footer-contact-list">
+          <div class="footer-contact-item"><span>&#128205;</span><span>AD : Cepok, jalan raya Cinere no8, po box 1843</span></div>
+          <div class="footer-contact-item"><span>&#128222;</span><span>(+24) 1344 205 699</span></div>
+          <div class="footer-contact-item"><span>&#9993;</span><span>ContactArch@gmail.com</span></div>
+          <div class="footer-contact-item"><span>&#128336;</span><span>Monday- Friday : 8am - 6pm</span></div>
+        </div>
+      </div>
+      <div class="footer-col footer-col--mail">
+        <p class="footer-section-title">Mail Us</p>
+        <input type="text" class="mailus-field" placeholder="Dari:"/>
+        <input type="text" class="mailus-field" placeholder="Subject:"/>
+        <textarea class="mailus-field" placeholder="Isi pesan"></textarea>
+        <div class="mailus-submit"><button class="btn-hero-orange">Kirim</button></div>
+      </div>
+    </div>
+    <div class="footer-copy">Copyright &copy; 2026 Designed by <a href="#">sejarah penebusan</a>. All rights reserved.</div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/sp-config.js"></script>
+<script src="js/sp-auth.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>
