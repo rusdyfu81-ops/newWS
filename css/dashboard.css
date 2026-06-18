@@ -1,0 +1,110 @@
+/* ============================================================
+   DASHBOARD.CSS — Halaman member
+   Memakai base.css, layout.css, desktop.css (nav/footer/tombol).
+   ============================================================ */
+
+/* ---------- HEADER PROFIL (tosca) ---------- */
+.dash-head { background:var(--tosca); color:#fff; padding:1.75rem var(--pad) 2rem; }
+.dash-head-inner {
+  display:grid; grid-template-columns:auto 1fr;
+  column-gap:1rem; row-gap:.4rem; align-items:center;
+}
+.dash-avatar, .dash-avatar-ph {
+  width:84px; height:84px; border-radius:50%; grid-column:1; grid-row:1;
+  border:3px solid rgba(255,255,255,.6); background:rgba(255,255,255,.15);
+}
+.dash-avatar { object-fit:cover; }
+.dash-avatar-ph { display:flex; align-items:center; justify-content:center; font-size:.65rem; color:rgba(255,255,255,.75); text-align:center; }
+.dash-name { grid-column:2; grid-row:1; font-family:'Arial Black',Arial,sans-serif; font-weight:900; font-size:1.6rem; line-height:1; text-transform:uppercase; align-self:end; }
+.dash-role { grid-column:2; grid-row:2; font-weight:700; font-size:.95rem; align-self:start; }
+.dash-progress { grid-column:2; grid-row:3; }
+.dash-bar { height:11px; border-radius:999px; background:rgba(255,255,255,.3); overflow:hidden; }
+.dash-bar > span { display:block; height:100%; width:0; background:var(--orange); border-radius:999px; transition:width .6s; }
+.dash-progress-label { font-size:.74rem; opacity:.9; margin-top:.4rem; }
+.dash-stats { grid-column:1 / -1; grid-row:4; display:flex; flex-wrap:wrap; gap:.9rem 1.5rem; margin-top:1rem; }
+.dash-stat-val { font-family:'Arial Black',Arial,sans-serif; font-weight:900; font-size:1.85rem; line-height:1; }
+.dash-stat-lbl { font-size:.64rem; opacity:.85; margin-top:3px; }
+.dash-bio { grid-column:1 / -1; grid-row:5; font-size:.76rem; line-height:1.6; opacity:.85; margin-top:.5rem; }
+
+/* ---------- SECTION UMUM ---------- */
+.dash-section { padding:2rem var(--pad); }
+.dash-sec-title {
+  display:flex; align-items:center; gap:.6rem;
+  font-family:'Arial Black',Arial,sans-serif; font-weight:900;
+  font-size:1.3rem; text-transform:uppercase; color:var(--tosca); margin-bottom:1.25rem;
+}
+.dash-sec-title .ico { font-size:1.3rem; }
+
+/* ---------- LANJUTKAN BELAJAR ---------- */
+.dash-resume { background:var(--offwhite); }
+.resume-card { background:var(--tosca); color:#fff; border-radius:18px; padding:1.5rem 1.4rem; position:relative; }
+.resume-meta { font-size:.78rem; font-weight:700; opacity:.9; margin-bottom:.5rem; }
+.resume-title { font-family:'Arial Black',Arial,sans-serif; font-weight:900; font-size:1.35rem; line-height:1.15; margin-bottom:.5rem; padding-right:3.5rem; }
+.resume-sub { font-size:.82rem; opacity:.9; margin-bottom:1rem; }
+.resume-bar { height:10px; border-radius:999px; background:rgba(255,255,255,.3); overflow:hidden; margin-bottom:.5rem; }
+.resume-bar > span { display:block; height:100%; width:0; background:var(--orange); transition:width .6s; }
+.resume-pct { font-size:.75rem; opacity:.9; }
+.resume-play { position:absolute; top:1.4rem; right:1.4rem; width:54px; height:54px; border-radius:50%; background:#fff; color:var(--tosca); display:flex; align-items:center; justify-content:center; font-size:1.2rem; border:none; cursor:pointer; }
+
+/* ---------- BUKU SAYA ---------- */
+.dash-mybooks { background:var(--offwhite); padding-top:.5rem; }
+.mybooks-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.25rem 1rem; }
+.mb-card { background:var(--tosca); border-radius:12px; overflow:hidden; }
+.mb-cover { background:linear-gradient(160deg,#eef6f5,#f7f1e8); padding:.75rem; display:flex; justify-content:center; }
+.mb-cover img { height:130px; width:auto; filter:drop-shadow(0 6px 12px rgba(0,0,0,.2)); }
+.mb-body { padding:.85rem .9rem 1rem; color:#fff; }
+.mb-title { font-weight:700; font-size:.9rem; margin-bottom:.5rem; }
+.mb-bar { height:7px; border-radius:999px; background:rgba(255,255,255,.3); overflow:hidden; margin-bottom:.4rem; }
+.mb-bar > span { display:block; height:100%; background:var(--orange); }
+.mb-meta { font-size:.72rem; opacity:.9; }
+
+.dash-dots { display:flex; justify-content:center; gap:.5rem; margin:1.5rem 0; }
+.dash-dots span { width:11px; height:11px; border-radius:50%; background:#cdcdcd; }
+.dash-dots span.active { background:var(--orange); }
+.dash-more { text-align:center; }
+.dash-more .btn-hero-orange { padding:.8rem 2.5rem; font-size:1rem; }
+
+/* ---------- EVENT & KELAS ---------- */
+.dash-events { background:var(--white); padding:2.5rem var(--pad); }
+
+/* logout link di navbar */
+.nav-logout { color:var(--white); font-size:.8rem; font-weight:700; cursor:pointer; }
+.nav-logout:hover { text-decoration:underline; }
+
+/* ============================================================
+   TABLET (≥ 680px)
+   ============================================================ */
+@media (min-width:680px) {
+  .mybooks-grid { grid-template-columns:repeat(3,1fr); }
+  .dash-name { font-size:2rem; }
+}
+
+/* ============================================================
+   DESKTOP (≥ 1024px)
+   ============================================================ */
+@media (min-width:1024px) {
+  .dash-head { padding:0; }
+  .dash-head-inner { max-width:1180px; margin:0 auto; padding:3rem 40px; column-gap:2.5rem; row-gap:.6rem; align-items:start; }
+  .dash-avatar, .dash-avatar-ph { width:170px; height:170px; grid-row:1 / span 5; align-self:start; }
+  .dash-name { font-size:3rem; }
+  .dash-role { font-size:1.1rem; }
+  .dash-progress { max-width:760px; }
+  .dash-bar { height:13px; }
+  .dash-stats { grid-column:2; grid-row:4; gap:2.5rem; margin-top:1.25rem; }
+  .dash-stat-val { font-size:2.3rem; }
+  .dash-stat-lbl { font-size:.72rem; }
+  .dash-bio { grid-column:2; grid-row:5; max-width:680px; }
+
+  .dash-section { padding:0; }
+  .dash-resume { padding:3.5rem 0 1rem; }
+  .dash-sec-title { font-size:1.7rem; margin-bottom:1.5rem; }
+  .resume-card { padding:2.5rem; }
+  .resume-title { font-size:2rem; }
+  .resume-play { width:84px; height:84px; font-size:1.8rem; top:50%; transform:translateY(-50%); right:2.5rem; }
+
+  .dash-mybooks { padding:2.5rem 0 1rem; }
+  .mybooks-grid { grid-template-columns:repeat(3,1fr); gap:2rem; }
+  .mb-cover img { height:170px; }
+
+  .dash-events { padding:3.5rem 0 4.5rem; }
+}
