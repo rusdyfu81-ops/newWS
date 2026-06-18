@@ -1,0 +1,190 @@
+/* ============================================================
+   KOMUNITAS.CSS — Halaman Komunitas
+   Memakai base.css, layout.css, desktop.css untuk nav/footer/tombol.
+   ============================================================ */
+
+/* Tombol khusus */
+.btn-white-solid {
+  background:#fff; color:var(--tosca); border:2px solid #fff;
+  border-radius:999px; font-weight:700; font-size:.875rem;
+  padding:.65rem 1.4rem; cursor:pointer;
+}
+.btn-tosca-pill {
+  background:var(--tosca); color:#fff; border:2px solid var(--tosca);
+  border-radius:999px; font-weight:700; font-size:.875rem;
+  padding:.65rem 1.4rem; cursor:pointer;
+}
+
+/* ---------- HERO ---------- */
+.kom-hero { background:var(--tosca); color:var(--white); padding:2rem var(--pad) 2.5rem; }
+.kom-hero-title {
+  font-family:'Arial Black',Arial,sans-serif; font-weight:900;
+  font-size:2.3rem; line-height:1.04; text-transform:uppercase; margin-bottom:1rem;
+}
+.kom-hero-desc { font-size:.85rem; line-height:1.6; opacity:.95; margin-bottom:1.5rem; }
+.kom-hero-btns { display:flex; gap:.75rem; flex-wrap:wrap; margin-bottom:1.75rem; }
+.kom-hero-stats { display:flex; gap:1.5rem; margin-bottom:2rem; }
+.kom-hero-stats .hstat-val { font-family:'Arial Black',Arial,sans-serif; font-weight:900; font-size:2rem; line-height:1; }
+.kom-hero-stats .hstat-lbl { font-size:.7rem; opacity:.8; margin-top:3px; }
+
+/* Live class card */
+.live-card { background:var(--tosca-dk); border-radius:16px; padding:.75rem; }
+.live-photo { width:100%; aspect-ratio:4 / 3; object-fit:cover; border-radius:10px; display:block; }
+.live-photo-ph {
+  width:100%; aspect-ratio:4 / 3; border-radius:10px;
+  background:rgba(255,255,255,.12); display:flex; align-items:center; justify-content:center;
+  color:rgba(255,255,255,.6); font-size:.8rem;
+}
+.live-info { padding:.85rem .6rem .25rem; }
+.live-title { font-weight:700; font-size:.95rem; line-height:1.35; }
+.live-date { font-size:.76rem; opacity:.82; margin-top:.3rem; }
+.countdown { display:flex; gap:.4rem; padding:.75rem .4rem; }
+.cd-cell { flex:1; text-align:center; }
+.cd-num { font-family:'Arial Black',Arial,sans-serif; font-weight:900; font-size:1.7rem; line-height:1; }
+.cd-lbl { font-size:.6rem; opacity:.7; margin-top:2px; }
+.live-card .btn-hero-orange { width:100%; }
+
+/* ---------- TIGA CARA TERLIBAT ---------- */
+.involve { background:#fffde7; padding:2.5rem var(--pad) 3rem; }
+.involve-eyebrow { color:var(--tosca); text-align:center; margin-bottom:.5rem; }
+.involve-title {
+  font-family:'Arial Black',Arial,sans-serif; font-weight:900;
+  font-size:2rem; text-transform:uppercase; color:var(--tosca);
+  text-align:center; line-height:1.05; margin-bottom:.75rem;
+}
+.involve-sub { text-align:center; font-size:.875rem; color:var(--gray); line-height:1.6; max-width:38rem; margin:0 auto; }
+.involve-btns { display:flex; justify-content:center; gap:.75rem; flex-wrap:wrap; margin:1.5rem 0 2.75rem; }
+
+.involve-grid { display:grid; grid-template-columns:1fr; gap:1.5rem; }
+.icard {
+  background:linear-gradient(160deg,var(--tosca),var(--tosca-dk));
+  color:#fff; border-radius:16px; padding:1.4rem;
+  display:flex; flex-direction:column; position:relative;
+}
+.icard-head { display:flex; align-items:center; gap:.85rem; margin-bottom:.85rem; }
+.icard-icon {
+  width:52px; height:52px; background:#fff; border-radius:50%;
+  display:flex; align-items:center; justify-content:center; flex-shrink:0;
+  box-shadow:0 6px 14px rgba(0,0,0,.18);
+}
+.icard-icon img { width:28px; height:28px; object-fit:contain; }
+.icard-title { font-family:'Arial Black',Arial,sans-serif; font-weight:900; font-size:1.15rem; }
+.icard-desc { font-size:.82rem; line-height:1.55; opacity:.95; margin-bottom:1.25rem; flex:1; }
+.icard .btn-hero-orange { align-self:flex-end; }
+
+/* ---------- ACTIVITY FEED ---------- */
+.activity { background:var(--offwhite); padding:2.5rem var(--pad); }
+.activity-box { background:#f3ede3; border-radius:16px; padding:1.5rem 1.25rem; }
+.afeed { display:flex; flex-direction:column; gap:1.4rem; }
+.aitem { display:flex; gap:.85rem; align-items:flex-start; }
+.avatar {
+  width:44px; height:44px; border-radius:50%; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+  color:#fff; font-weight:700; font-size:.85rem; background:var(--c,#00a69c);
+  background-size:cover; background-position:center;
+}
+.aitem-name { font-weight:700; font-size:.9rem; margin-bottom:.15rem; }
+.aitem-quote { font-size:.85rem; line-height:1.45; }
+.aitem-meta { font-size:.72rem; color:var(--tosca); margin-top:.3rem; }
+
+/* ---------- VOICES (testimoni) ---------- */
+.voices { background:var(--tosca); color:#fff; padding:2.5rem var(--pad); }
+.voices-eyebrow { color:rgba(255,255,255,.7); margin-bottom:.5rem; }
+.voices-title {
+  font-family:'Arial Black',Arial,sans-serif; font-weight:900;
+  font-size:2rem; text-transform:uppercase; line-height:1.05; margin-bottom:2rem;
+}
+.voices-grid { display:flex; flex-direction:column; gap:1.25rem; }
+.vcard { background:#fff; color:var(--black); border-radius:14px; padding:1.5rem; }
+.vcard-head { display:flex; gap:.75rem; align-items:center; margin-bottom:1rem; }
+.vcard-name { color:var(--tosca); font-weight:700; font-size:.95rem; }
+.vcard-meta { font-size:.7rem; color:var(--gray); margin-top:2px; }
+.vcard-text { font-size:.85rem; line-height:1.6; color:#333; }
+.voices-cta { text-align:center; margin-top:2rem; }
+
+/* ---------- 3 LANGKAH ---------- */
+.steps { background:var(--offwhite); padding:2.5rem var(--pad) 3rem; }
+.steps-eyebrow { color:var(--tosca); margin-bottom:.5rem; }
+.steps-title {
+  font-family:'Arial Black',Arial,sans-serif; font-weight:900;
+  font-size:2rem; text-transform:uppercase; color:var(--tosca);
+  line-height:1.05; margin-bottom:.75rem;
+}
+.steps-sub { font-size:.875rem; color:var(--gray); line-height:1.6; margin-bottom:2.25rem; }
+.steps-grid { display:flex; flex-direction:column; gap:1.75rem; }
+.step-num {
+  width:38px; height:38px; border-radius:50%; background:var(--tosca); color:#fff;
+  font-family:'Arial Black',Arial,sans-serif; font-weight:900; font-size:1.05rem;
+  display:flex; align-items:center; justify-content:center; margin-bottom:.85rem;
+}
+.step-title { font-family:'Arial Black',Arial,sans-serif; font-weight:900; font-size:1.05rem; line-height:1.2; margin-bottom:.45rem; }
+.step-desc { font-size:.82rem; color:var(--gray); line-height:1.55; }
+
+/* ============================================================
+   TABLET (≥ 680px)
+   ============================================================ */
+@media (min-width:680px) {
+  .involve-grid { grid-template-columns:repeat(3,1fr); gap:2.5rem 1.25rem; }
+  .icard .btn-hero-orange { align-self:flex-start; }
+  .afeed { display:grid; grid-template-columns:1fr 1fr; gap:1.4rem 2rem; }
+  .voices-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.5rem; }
+  .steps-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:2rem; }
+  .kom-hero-title { font-size:2.8rem; }
+}
+
+/* ============================================================
+   DESKTOP (≥ 1024px)
+   ============================================================ */
+@media (min-width:1024px) {
+
+  /* HERO 2 kolom */
+  .kom-hero { padding:0; }
+  .kom-hero-inner {
+    max-width:1180px; margin:0 auto; padding:4rem 40px;
+    display:grid; grid-template-columns:1.4fr 1fr; gap:4rem; align-items:center;
+  }
+  .kom-hero-title { font-size:3.4rem; margin-bottom:1.25rem; }
+  .kom-hero-desc { font-size:1rem; max-width:34rem; margin-bottom:1.75rem; }
+  .kom-hero-stats { gap:2.5rem; margin-bottom:0; }
+  .kom-hero-stats .hstat-val { font-size:2.4rem; }
+  .live-card { max-width:380px; justify-self:end; }
+  .cd-num { font-size:2rem; }
+
+  /* TIGA CARA TERLIBAT */
+  .involve { padding:4rem 0 4.5rem; }
+  .involve > .wrap { }
+  .involve-title { font-size:2.8rem; }
+  .involve-grid {
+    grid-template-columns:repeat(3,1fr); gap:2.5rem; margin-top:3.5rem;
+  }
+  .icard { padding:3rem 1.6rem 1.6rem; }
+  .icard-head { display:block; margin-bottom:1rem; }
+  .icard-icon {
+    position:absolute; top:-28px; left:50%; transform:translateX(-50%);
+    width:60px; height:60px;
+  }
+  .icard-icon img { width:32px; height:32px; }
+  .icard-title { font-size:1.3rem; }
+  .icard-desc { font-size:.88rem; }
+
+  /* ACTIVITY */
+  .activity { padding:0 0 4.5rem; }
+  .activity > .wrap { }
+  .activity-box { padding:2.25rem; max-width:1000px; margin:0 auto; }
+  .afeed { gap:1.75rem 3rem; }
+
+  /* VOICES */
+  .voices { padding:4.5rem 0; }
+  .voices-title { font-size:3rem; }
+  .voices-grid { gap:2rem; }
+  .vcard { padding:1.75rem; }
+
+  /* STEPS */
+  .steps { padding:4.5rem 0; }
+  .steps-title { font-size:3rem; }
+  .steps-sub { max-width:40rem; }
+  .steps-grid { gap:3rem; }
+  .step-num { width:42px; height:42px; font-size:1.2rem; }
+  .step-title { font-size:1.2rem; }
+  .step-desc { font-size:.9rem; }
+}
