@@ -1,0 +1,112 @@
+/* ============================================================
+   DETAIL.CSS — Halaman Detail Buku
+   Memakai base.css, layout.css, desktop.css (nav/footer/tombol) & buku.css (kartu seri).
+   ============================================================ */
+
+/* ---------- HERO DETAIL ---------- */
+.bd-hero { background:var(--tosca); color:#fff; padding:2rem var(--pad) 2.5rem; }
+.bd-hero-inner { display:flex; flex-direction:column; gap:1.5rem; }
+.bd-cover { display:flex; justify-content:center; }
+.bd-cover img { width:62%; max-width:260px; filter:drop-shadow(0 16px 30px rgba(0,0,0,.35)); }
+.bd-cover .cover-ph { width:62%; max-width:260px; }
+
+.bd-eyebrow { font-size:.72rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; opacity:.85; margin-bottom:.4rem; }
+.bd-title { font-family:'Arial Black',Arial,sans-serif; font-weight:900; font-size:1.8rem; line-height:1.06; text-transform:uppercase; margin-bottom:.5rem; }
+.bd-subtitle { font-size:.95rem; opacity:.95; margin-bottom:.75rem; }
+.bd-author { font-size:.9rem; font-weight:700; margin-bottom:.6rem; }
+.bd-stars { color:var(--orange); letter-spacing:3px; font-size:1.1rem; margin-bottom:1.25rem; }
+
+/* kartu harga */
+.bd-pricecard { background:#fff; color:var(--black); border-radius:16px; padding:1.4rem; }
+.bd-price-label { font-size:.8rem; color:var(--gray); font-weight:700; margin-bottom:.3rem; }
+.bd-price { font-family:'Arial Black',Arial,sans-serif; font-weight:900; font-size:1.9rem; color:var(--tosca); line-height:1; margin-bottom:.35rem; }
+.bd-price-sub { font-size:.8rem; color:var(--gray); margin-bottom:1rem; }
+
+.bd-getbox { background:var(--tosca); color:#fff; border-radius:10px; padding:.9rem 1rem; margin-bottom:1.1rem; }
+.bd-get-title { font-size:.82rem; font-weight:700; margin-bottom:.6rem; }
+.bd-get-list { display:flex; flex-wrap:wrap; gap:.5rem 1.25rem; }
+.bd-get-item { font-size:.76rem; display:inline-flex; align-items:center; gap:.35rem; }
+.bd-get-item .gi { opacity:.95; }
+
+.bd-buy-btns { display:flex; flex-direction:column; gap:.75rem; }
+.bd-btn-buy {
+  background:var(--orange); color:var(--black); border:none; border-radius:999px;
+  font-weight:700; font-size:1rem; padding:.85rem 1.5rem; cursor:pointer;
+}
+.bd-btn-cart {
+  background:#fff; color:var(--tosca); border:2px solid var(--tosca); border-radius:999px;
+  font-weight:700; font-size:1rem; padding:.8rem 1.5rem; cursor:pointer;
+  display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
+}
+.bd-btn-buy:hover { filter:brightness(.97); }
+.bd-btn-cart:hover { background:var(--offwhite); }
+
+/* ---------- TABS ---------- */
+.bd-tabs { background:var(--white); padding:2rem var(--pad); }
+.bd-tablist { display:flex; gap:1.5rem; border-bottom:2px solid #e7e2d8; overflow-x:auto; margin-bottom:1.5rem; }
+.bd-tab {
+  background:none; border:none; cursor:pointer; white-space:nowrap;
+  font-family:Arial,sans-serif; font-size:1rem; color:var(--gray);
+  padding:0 0 .85rem; position:relative; font-weight:700;
+}
+.bd-tab.active { color:var(--tosca); }
+.bd-tab.active::after { content:''; position:absolute; left:0; right:0; bottom:-2px; height:3px; background:var(--tosca); }
+.bd-panel { display:none; }
+.bd-panel.active { display:block; }
+.bd-panel p { font-size:.88rem; line-height:1.75; color:#333; margin-bottom:1rem; max-width:60rem; }
+
+/* daftar isi */
+.bd-toc { list-style:none; max-width:48rem; }
+.bd-toc li { display:flex; align-items:center; gap:.85rem; padding:.7rem 0; border-bottom:1px solid #eee; font-size:.9rem; }
+.bd-toc .toc-no { width:30px; height:30px; border-radius:50%; background:var(--offwhite); color:var(--tosca); font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:.85rem; }
+.bd-toc .toc-dur { margin-left:auto; color:var(--gray); font-size:.78rem; }
+
+/* ulasan */
+.bd-review { border-bottom:1px solid #eee; padding:1.1rem 0; max-width:52rem; }
+.bd-review-head { display:flex; align-items:center; gap:.7rem; margin-bottom:.5rem; }
+.bd-review-stars { color:var(--orange); font-size:.85rem; letter-spacing:2px; }
+.bd-review-name { font-weight:700; font-size:.9rem; }
+.bd-review-text { font-size:.86rem; line-height:1.6; color:#333; }
+
+/* ---------- SERI LAINNYA ---------- */
+.bd-more { background:var(--offwhite); padding:2.5rem var(--pad) 3rem; }
+.bd-more-eyebrow { color:var(--tosca); margin-bottom:.5rem; }
+.bd-more-title { font-family:'Arial Black',Arial,sans-serif; font-weight:900; font-size:2rem; text-transform:uppercase; color:var(--tosca); line-height:1.05; margin-bottom:2rem; }
+.bd-more-all { text-align:center; margin-top:.5rem; }
+.btn-tosca-pill-lg { background:var(--tosca); color:#fff; border:none; border-radius:999px; font-weight:700; font-size:1rem; padding:.85rem 3rem; cursor:pointer; }
+.btn-tosca-pill-lg:hover { filter:brightness(.97); }
+
+/* ============================================================
+   TABLET (≥ 680px)
+   ============================================================ */
+@media (min-width:680px) {
+  .bd-title { font-size:2.2rem; }
+}
+
+/* ============================================================
+   DESKTOP (≥ 1024px)
+   ============================================================ */
+@media (min-width:1024px) {
+  .bd-hero { padding:0; }
+  .bd-hero-inner { max-width:1180px; margin:0 auto; padding:3.5rem 40px; flex-direction:row; align-items:flex-start; gap:3.5rem; }
+  .bd-cover { flex:0 0 360px; }
+  .bd-cover img, .bd-cover .cover-ph { width:340px; max-width:none; }
+  .bd-hero-info { flex:1; }
+  .bd-title { font-size:2.7rem; }
+  .bd-subtitle { font-size:1.05rem; }
+  .bd-pricecard { padding:1.75rem 2rem; }
+  .bd-price { font-size:2.2rem; }
+  .bd-get-list { gap:.5rem 1.75rem; }
+  .bd-buy-btns { flex-direction:row; }
+  .bd-buy-btns .bd-btn-buy, .bd-buy-btns .bd-btn-cart { flex:1; }
+
+  .bd-tabs { padding:3.5rem 0; }
+  .bd-tabs .wrap { }
+  .bd-tablist { gap:2.5rem; margin-bottom:2rem; }
+  .bd-tab { font-size:1.15rem; }
+  .bd-panel p { font-size:.95rem; }
+
+  .bd-more { padding:4rem 0 5rem; }
+  .bd-more-title { font-size:3rem; }
+  .bd-more .books-grid { grid-template-columns:repeat(3,1fr); gap:2.5rem 2rem; }
+}
