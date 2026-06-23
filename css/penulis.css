@@ -1,0 +1,58 @@
+/* ============================================================
+   PENULIS.CSS — Halaman "About the Writer" (Abraham Park)
+   Memakai base.css, layout.css, desktop.css.
+   ============================================================ */
+
+/* ---------- HERO ---------- */
+.wr-hero { background:var(--tosca); color:#fff; padding:2rem var(--pad) 0; }
+.wr-hero-title {
+  font-family:'Arial Black',Arial,sans-serif; font-weight:900;
+  font-size:2.3rem; line-height:1; text-transform:uppercase;
+  text-align:center; margin-bottom:1.75rem;
+}
+.wr-hero-inner { display:flex; flex-direction:column; gap:1.5rem; align-items:center; }
+.wr-photo { width:75%; max-width:300px; }
+.wr-photo img { width:100%; display:block; }
+.wr-info { width:100%; }
+.wr-name { font-family:'Arial Black',Arial,sans-serif; font-weight:900; font-size:1.25rem; margin-bottom:.25rem; }
+.wr-dates { font-style:italic; font-weight:700; font-size:1rem; margin-bottom:1rem; }
+.wr-bio { font-size:.9rem; line-height:1.8; opacity:.97; }
+
+/* ---------- KREDENSIAL ---------- */
+.wr-creds { background:var(--offwhite); padding:2.5rem var(--pad) 3rem; }
+.wr-creds-grid { display:grid; grid-template-columns:1fr; gap:1.25rem 3rem; max-width:1100px; margin:0 auto; }
+.wr-cred { display:flex; gap:.75rem; align-items:flex-start; }
+.wr-cred::before {
+  content:''; flex-shrink:0; width:14px; height:14px; border-radius:50%;
+  background:var(--tosca); margin-top:.25rem;
+}
+.wr-cred p { font-size:.9rem; line-height:1.5; color:var(--tosca); font-weight:500; }
+
+/* ============================================================
+   TABLET (≥ 680px)
+   ============================================================ */
+@media (min-width:680px) {
+  .wr-hero-title { font-size:3.2rem; }
+  .wr-creds-grid { grid-template-columns:1fr 1fr; grid-template-rows:repeat(4,auto); grid-auto-flow:column; }
+}
+
+/* ============================================================
+   DESKTOP (≥ 1024px)
+   ============================================================ */
+@media (min-width:1024px) {
+  .wr-hero { padding:2.5rem 0 0; }
+  .wr-hero-title { font-size:4.5rem; margin-bottom:0; }
+  .wr-hero-inner {
+    flex-direction:row; align-items:flex-end; justify-content:center;
+    gap:4rem; max-width:1180px; margin:0 auto; padding:0 40px;
+  }
+  .wr-photo { flex:0 0 38%; max-width:none; align-self:flex-end; }
+  .wr-info { flex:1; padding-bottom:5rem; }
+  .wr-name { font-size:1.6rem; }
+  .wr-dates { font-size:1.15rem; margin-bottom:1.5rem; }
+  .wr-bio { font-size:1rem; line-height:1.9; max-width:34rem; }
+
+  .wr-creds { padding:3.5rem 0 4rem; }
+  .wr-creds-grid { padding:0 40px; gap:1.5rem 4rem; }
+  .wr-cred p { font-size:.95rem; }
+}
