@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Hasil Pencarian | Sejarah Penebusan</title>
+  <link rel="stylesheet" href="css/base.css"/>
+  <link rel="stylesheet" href="css/layout.css"/>
+  <link rel="stylesheet" href="css/desktop.css"/>
+  <link rel="stylesheet" href="css/support.css"/>
+</head>
+<body>
+<div id="site-nav" data-active=""></div>
+<section class="sr">
+  <div class="sr-inner">
+    <h1 class="sr-head">Hasil Pencarian : <span class="q" id="sr-q">Perjanjian Lama</span></h1>
+    <form class="sr-form" id="sr-form">
+      <input type="text" class="sr-input" id="sr-input" placeholder="Cari event, kelas, artikel..."/>
+      <button class="sr-go" type="submit">Cari</button>
+    </form>
+    <div class="sr-tabs">
+        <button class="sr-tab active" data-type="all">Semuanya</button>
+        <button class="sr-tab" data-type="event">Event</button>
+        <button class="sr-tab" data-type="kelas-live">Kelas Live</button>
+        <button class="sr-tab" data-type="seminar">Seminar</button>
+        <button class="sr-tab" data-type="article">Article</button>
+    </div>
+      <div class="sr-item" data-type="kelas-live event">
+        <div class="sr-body">
+          <p class="sr-kicker">KELAS LIVE:</p>
+          <h3 class="sr-title"><a href="event.html">Memahami Perjanjian Lama — Cara Baca yang Mengubah Segalanya</a></h3>
+          <p class="sr-desc">Sesi interaktif bersama Johannes Rahardjo membahas cara membaca Perjanjian Lama sebagai narasi penebusan yang utuh.</p>
+        </div>
+        <div class="sr-thumb">
+          <img src="assets/images/pembicara.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+          <div class="sr-thumb-ph" style="display:none">Gambar</div>
+        </div>
+      </div>
+      <div class="sr-item" data-type="kelas-live event">
+        <div class="sr-body">
+          <p class="sr-kicker">KELAS LIVE:</p>
+          <h3 class="sr-title"><a href="event.html">Menemukan Yesus di Perjanjian Lama</a></h3>
+          <p class="sr-desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.</p>
+        </div>
+        <div class="sr-thumb">
+          <img src="assets/images/pembicara.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+          <div class="sr-thumb-ph" style="display:none">Gambar</div>
+        </div>
+      </div>
+      <div class="sr-item" data-type="seminar event">
+        <div class="sr-body">
+          <p class="sr-kicker">SEMINAR:</p>
+          <h3 class="sr-title"><a href="event.html">Narasi Penebusan dalam Perjanjian Lama dan Baru</a></h3>
+          <p class="sr-desc">Seminar tematik yang menelusuri benang merah Perjanjian Lama hingga penggenapannya di dalam Kristus.</p>
+        </div>
+        <div class="sr-thumb">
+          <img src="assets/images/pembicara.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+          <div class="sr-thumb-ph" style="display:none">Gambar</div>
+        </div>
+      </div>
+      <div class="sr-item" data-type="article">
+        <div class="sr-body">
+          <p class="sr-kicker">ARTIKEL:</p>
+          <h3 class="sr-title"><a href="#">Mengapa Perjanjian Lama Masih Penting Hari Ini</a></h3>
+          <p class="sr-desc">Artikel singkat yang menjelaskan relevansi Perjanjian Lama bagi pembacaan Alkitab secara utuh.</p>
+        </div>
+        <div class="sr-thumb">
+          <img src="assets/images/pembicara.jpg" alt="" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"/>
+          <div class="sr-thumb-ph" style="display:none">Gambar</div>
+        </div>
+      </div>
+    <p class="sr-empty" id="sr-empty" style="display:none">Tidak ada hasil untuk kategori ini.</p>
+  </div>
+</section>
+<div id="site-footer"></div>
+<script src="js/components.js"></script>
+<script src="js/search.js"></script>
+</body>
+</html>
