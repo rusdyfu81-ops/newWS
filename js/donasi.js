@@ -24,17 +24,14 @@
     amts.forEach(function (x) { x.classList.remove('active'); });
   });
 
-  // submit (demo)
+  // submit -> lanjut ke halaman pembayaran donasi
   var form = document.getElementById('dn-form');
   if (form) form.addEventListener('submit', function (e) {
     e.preventDefault();
     var freq = document.querySelector('.dn-seg button.active');
     var amt = document.querySelector('.dn-amt.active');
-    var val = (custom && custom.value) ? ('Rp ' + custom.value) : (amt ? amt.textContent.trim() : '-');
-    var msg = document.getElementById('dn-msg');
-    if (msg) {
-      msg.textContent = 'Terima kasih! Donasi ' + val + ' (' + (freq ? freq.textContent.trim() : '') + ') — gerbang pembayaran akan ditambahkan.';
-      msg.style.display = 'block';
-    }
+    var rawAmt = (custom && custom.value) ? custom.value.replace(/[^0-9]/g, '') : (amt ? amt.textContent.replace(/[^0-9]/g, '') : '0');
+    var freqText = freq ? freq.textContent.trim() : 'One Time';
+    window.location.href = 'bayar-donasi.html?amount=' + encodeURIComponent(rawAmt) + '&freq=' + encodeURIComponent(freqText);
   });
 })();

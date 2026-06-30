@@ -17,14 +17,15 @@
       return '<li><a href="' + href + '"' + (active === key ? ' class="active"' : '') + '>' + label + '</a></li>';
     };
     var actions = logout
-      ? '<a href="#" class="nav-logout" id="logout-btn">Keluar</a>'
+      ? '<a href="dashboard.html" class="nav-auth">Dashboard</a><a href="#" class="nav-logout" id="logout-btn">Keluar</a>'
       : '<a href="login.html" class="nav-auth">Sign In / Sign Up</a>';
     return '' +
 '<nav class="nav">' +
 '  <a href="index.html"><img src="assets/images/logo_sp.png" alt="Sejarah Penebusan" class="nav-logo"/></a>' +
 '  <ul class="nav-menu">' +
      item('buku.html', 'Buku', 'buku') +
-'    <li><a href="index.html#perjalanan">Belajar</a></li>' +
+     item('belajar.html', 'Belajar', 'belajar') +
+     item('artikel.html', 'Artikel', 'artikel') +
      item('komunitas.html', 'Komunitas', 'komunitas') +
      item('event.html', 'Event', 'event') +
      item('tentang.html', 'Tentang', 'tentang') +
