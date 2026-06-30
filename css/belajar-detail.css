@@ -1,0 +1,79 @@
+/* ============================================================
+   BELAJAR-DETAIL.CSS — Halaman Detail Volume / Episode
+   Memakai base.css, layout.css, desktop.css.
+   ============================================================ */
+
+.vd-wrap { max-width:1100px; margin:0 auto; padding:0 20px; }
+
+/* Hero */
+.vd-hero { background:var(--offwhite); padding:1.5rem 0 2.5rem; }
+.vd-crumb { font-size:.76rem; color:#777; margin-bottom:1.2rem; }
+.vd-crumb a { color:#777; }
+.vd-hero-grid { display:grid; grid-template-columns:1fr; gap:1.8rem; align-items:center; }
+.vd-eyebrow { font-size:.72rem; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--tosca); margin-bottom:.5rem; }
+.vd-title { font-family:'Arial Black',Arial,sans-serif; font-weight:900; font-size:2rem; line-height:1.05; text-transform:uppercase; color:var(--black); }
+.vd-author { font-size:.9rem; color:#444; margin:.7rem 0; }
+.vd-author b { color:var(--tosca-dk); }
+.vd-meta { display:flex; flex-wrap:wrap; gap:.5rem; margin-bottom:1rem; }
+.vd-meta span { background:#fff; border:1px solid var(--border); border-radius:999px; padding:.3rem .7rem; font-size:.74rem; font-weight:700; color:#555; display:flex; align-items:center; gap:5px; }
+.vd-meta img { width:14px; height:14px; }
+.vd-desc { font-size:.92rem; line-height:1.7; color:#444; margin-bottom:1.3rem; max-width:560px; }
+.vd-cta { display:flex; gap:.7rem; flex-wrap:wrap; }
+.btn-primary { background:var(--tosca); color:#fff; border:none; border-radius:999px; font-weight:700; font-size:.9rem; padding:.8rem 1.7rem; cursor:pointer; }
+.btn-ghost { background:#fff; color:var(--tosca-dk); border:1.5px solid var(--tosca); border-radius:999px; font-weight:700; font-size:.9rem; padding:.8rem 1.6rem; cursor:pointer; }
+.vd-cover { justify-self:start; position:relative; width:240px; border-radius:14px; overflow:hidden; box-shadow:0 14px 36px rgba(0,0,0,.16); }
+.vd-cover img { width:100%; display:block; }
+.vd-cover .badge { position:absolute; top:10px; left:10px; background:#3DB548; color:#fff; font-size:.66rem; font-weight:700; text-transform:uppercase; padding:.3rem .6rem; border-radius:999px; }
+
+/* Sections */
+.vd-sec { padding:2.2rem 0; border-top:1px solid var(--border); }
+.vd-sec-h { font-family:'Arial Black',Arial,sans-serif; font-weight:900; font-size:1.25rem; text-transform:uppercase; color:var(--black); margin-bottom:.3rem; }
+.vd-sec-sub { font-size:.84rem; color:#777; margin-bottom:1.3rem; }
+
+/* Episode list */
+.ep-row { display:flex; align-items:center; gap:1rem; padding:.95rem .4rem; border-bottom:1px solid var(--border); }
+.ep-row:hover { background:var(--offwhite); }
+.ep-num { width:30px; flex-shrink:0; text-align:center; font-family:'Arial Black',Arial,sans-serif; font-weight:900; color:#bbb; font-size:1rem; }
+.ep-main { flex:1; min-width:0; }
+.ep-name { font-weight:700; font-size:.95rem; color:var(--black); }
+.ep-desc { font-size:.8rem; color:#777; margin-top:.15rem; line-height:1.45; }
+.ep-media { display:flex; gap:.4rem; margin-top:.4rem; }
+.ep-media span { display:flex; align-items:center; gap:4px; font-size:.66rem; font-weight:700; color:var(--tosca-dk); background:var(--offwhite); border-radius:999px; padding:.16rem .5rem; }
+.ep-media img { width:12px; height:12px; }
+.ep-dur { font-size:.78rem; color:#999; flex-shrink:0; white-space:nowrap; }
+.ep-state { flex-shrink:0; width:88px; text-align:right; }
+.play-btn { width:38px; height:38px; border-radius:50%; background:var(--tosca); display:inline-flex; align-items:center; justify-content:center; cursor:pointer; border:none; }
+.play-btn::after { content:""; border-style:solid; border-width:7px 0 7px 12px; border-color:transparent transparent transparent #fff; margin-left:3px; }
+.lock-pill { display:inline-flex; align-items:center; gap:5px; background:#eee; color:#777; font-size:.68rem; font-weight:700; text-transform:uppercase; padding:.35rem .7rem; border-radius:999px; }
+.lock-pill .lk { width:9px; height:8px; border:1.6px solid #888; border-bottom:none; border-radius:3px 3px 0 0; position:relative; top:-1px; }
+.tool-ico { width:38px; height:38px; border-radius:10px; background:var(--offwhite); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.tool-ico img { width:20px; height:20px; object-fit:contain; }
+.open-pill { display:inline-block; background:var(--tosca); color:#fff; font-size:.7rem; font-weight:700; padding:.4rem .85rem; border-radius:999px; cursor:pointer; border:none; }
+
+/* Learning objectives */
+.lo-box { background:var(--offwhite); border-radius:16px; padding:1.6rem 1.8rem; }
+.lo-box ul { list-style:none; padding:0; margin:0; display:grid; gap:.7rem; }
+.lo-box li { font-size:.9rem; color:#333; line-height:1.5; padding-left:1.6rem; position:relative; }
+.lo-box li::before { content:"\2713"; position:absolute; left:0; color:var(--tosca); font-weight:900; }
+
+/* Tools & worksheet */
+.tw-grid { display:grid; grid-template-columns:1fr; gap:1rem; }
+.tw-card { background:#fff; border:1px solid var(--border); border-radius:16px; padding:1.4rem; display:flex; gap:1rem; align-items:center; }
+.tw-ico { width:50px; height:50px; border-radius:12px; background:var(--offwhite); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+.tw-ico img { width:26px; height:26px; }
+.tw-card h4 { font-family:'Arial Black',Arial,sans-serif; font-weight:900; font-size:.95rem; text-transform:uppercase; margin-bottom:.2rem; }
+.tw-card p { font-size:.78rem; color:#777; }
+.tw-lock { margin-left:auto; }
+
+/* Member banner */
+.vd-banner { background:var(--tosca); color:#fff; border-radius:18px; padding:2rem; text-align:center; margin:2rem 0; }
+.vd-banner h3 { font-family:'Arial Black',Arial,sans-serif; font-weight:900; font-size:1.4rem; text-transform:uppercase; margin-bottom:.5rem; }
+.vd-banner p { font-size:.9rem; opacity:.95; margin-bottom:1.2rem; }
+.vd-banner button { background:var(--orange); color:#222; border:none; border-radius:999px; font-weight:700; font-size:.95rem; padding:.85rem 2rem; cursor:pointer; }
+
+@media (min-width:768px){
+  .vd-hero-grid { grid-template-columns:1fr 240px; }
+  .vd-cover { order:2; }
+  .vd-title { font-size:2.5rem; }
+  .tw-grid { grid-template-columns:1fr 1fr; }
+}

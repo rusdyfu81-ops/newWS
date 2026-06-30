@@ -1,0 +1,98 @@
+/* CHECKOUT.CSS — Keranjang, Checkout, Pembayaran, Pesanan Sukses */
+
+.ck-hero { background:var(--tosca); color:#fff; padding:2rem var(--pad) 2.5rem; }
+.ck-hero-inner { max-width:1180px; margin:0 auto; }
+.ck-hero.narrow .ck-hero-inner { max-width:560px; }
+.ck-hero-title { font-family:'Arial Black',Arial,sans-serif; font-weight:900; font-size:1.9rem; text-transform:uppercase; }
+
+/* ---- Step indicator ---- */
+.ck-steps { display:flex; align-items:center; gap:.4rem; margin-top:1rem; flex-wrap:wrap; }
+.ck-step { display:flex; align-items:center; gap:.5rem; font-size:.78rem; font-weight:700; opacity:.55; }
+.ck-step.active { opacity:1; }
+.ck-step.done { opacity:.85; }
+.ck-step-num { width:24px; height:24px; border-radius:50%; background:rgba(255,255,255,.18); display:flex; align-items:center; justify-content:center; font-size:.74rem; flex:none; }
+.ck-step.active .ck-step-num { background:var(--orange); color:var(--black); }
+.ck-step.done .ck-step-num { background:#fff; color:var(--tosca-dk); }
+.ck-step-sep { width:18px; height:2px; background:rgba(255,255,255,.3); }
+
+.ck-body { padding:2rem var(--pad) 3rem; max-width:1180px; margin:0 auto; }
+.ck-grid { display:grid; grid-template-columns:1fr; gap:1.5rem; }
+
+/* ---- Card ---- */
+.ck-card { background:#fff; border:1px solid var(--border); border-radius:16px; padding:1.5rem; box-shadow:0 10px 30px rgba(0,0,0,.05); }
+.ck-card-title { font-family:'Arial Black',Arial,sans-serif; font-weight:900; font-size:1rem; text-transform:uppercase; color:var(--black); margin-bottom:1rem; }
+
+/* ---- Cart item ---- */
+.ck-item { display:flex; gap:.9rem; padding:1rem 0; border-bottom:1px solid var(--border); align-items:center; }
+.ck-item:last-child { border-bottom:none; }
+.ck-item-cover { width:64px; height:84px; border-radius:6px; overflow:hidden; flex:none; background:var(--offwhite); display:flex; align-items:center; justify-content:center; }
+.ck-item-cover img { width:100%; height:100%; object-fit:cover; }
+.ck-item-body { flex:1; min-width:0; }
+.ck-item-title { font-weight:700; font-size:.88rem; color:var(--black); line-height:1.3; }
+.ck-item-sub { font-size:.76rem; color:#888; margin-top:.15rem; }
+.ck-item-price { font-weight:700; font-size:.88rem; color:var(--tosca-dk); margin-top:.4rem; }
+.ck-item-qty { display:flex; align-items:center; gap:.5rem; }
+.ck-qty-btn { width:28px; height:28px; border-radius:50%; border:1.5px solid var(--border); background:#fff; font-weight:700; cursor:pointer; color:var(--black); }
+.ck-qty-val { font-weight:700; font-size:.88rem; width:18px; text-align:center; }
+.ck-item-remove { font-size:.72rem; color:#b3261e; font-weight:700; cursor:pointer; margin-top:.4rem; background:none; border:none; padding:0; }
+
+/* ---- Promo ---- */
+.ck-promo { display:flex; gap:.5rem; margin-top:1.2rem; }
+.ck-promo input { flex:1; border:1.5px solid var(--border); border-radius:999px; padding:.6rem 1rem; font-size:.84rem; }
+.ck-promo button { background:var(--black); color:#fff; border:none; border-radius:999px; padding:.6rem 1.2rem; font-weight:700; font-size:.8rem; cursor:pointer; }
+
+/* ---- Summary ---- */
+.ck-sum-row { display:flex; justify-content:space-between; font-size:.85rem; color:#555; padding:.4rem 0; }
+.ck-sum-row.total { border-top:1px solid var(--border); margin-top:.5rem; padding-top:.8rem; font-weight:700; font-size:1rem; color:var(--black); }
+.ck-sum-row.total span:last-child { color:var(--tosca-dk); }
+
+.ck-btn-primary { width:100%; background:var(--orange); color:var(--black); border:none; border-radius:999px; font-weight:700; font-size:.92rem; padding:.9rem; cursor:pointer; margin-top:1.2rem; }
+.ck-btn-primary:hover { filter:brightness(.97); }
+.ck-btn-ghost { width:100%; background:transparent; color:var(--tosca-dk); border:1.5px solid var(--tosca); border-radius:999px; font-weight:700; font-size:.85rem; padding:.75rem; cursor:pointer; margin-top:.7rem; }
+.ck-empty { text-align:center; padding:2.5rem 1rem; }
+.ck-empty p { color:#777; font-size:.9rem; margin-top:.5rem; }
+
+/* ---- Form (checkout) ---- */
+.ck-field { margin-bottom:1rem; }
+.ck-label { display:block; font-size:.8rem; font-weight:700; color:var(--black); margin-bottom:.4rem; }
+.ck-input, .ck-select, .ck-textarea { width:100%; border:1.5px solid var(--border); border-radius:10px; padding:.75rem .9rem; font-family:Arial,sans-serif; font-size:.88rem; color:var(--black); outline:none; }
+.ck-input:focus, .ck-select:focus, .ck-textarea:focus { border-color:var(--tosca); }
+.ck-row2 { display:grid; grid-template-columns:1fr 1fr; gap:.8rem; }
+
+/* ---- Payment methods ---- */
+.ck-pay-opt { display:flex; align-items:center; gap:.8rem; border:1.5px solid var(--border); border-radius:12px; padding:.9rem 1rem; margin-bottom:.7rem; cursor:pointer; }
+.ck-pay-opt.selected { border-color:var(--tosca); background:rgba(0,166,156,.06); }
+.ck-pay-opt input { accent-color:var(--tosca); width:18px; height:18px; }
+.ck-pay-opt-label { font-weight:700; font-size:.86rem; color:var(--black); }
+.ck-pay-opt-sub { font-size:.74rem; color:#888; margin-top:.1rem; }
+
+/* ---- Payment instructions page ---- */
+.ck-pay-box { text-align:center; padding:1rem 0 .5rem; }
+.ck-timer { display:inline-block; background:#fff4e0; color:#b07900; font-weight:700; font-size:.82rem; padding:.5rem 1.1rem; border-radius:999px; margin-bottom:1.2rem; }
+.ck-va { background:var(--offwhite); border-radius:12px; padding:1.1rem; margin:1rem 0; }
+.ck-va-label { font-size:.74rem; color:#888; text-transform:uppercase; letter-spacing:.06em; font-weight:700; }
+.ck-va-num { font-family:'Arial Black',Arial,sans-serif; font-size:1.4rem; color:var(--black); margin:.3rem 0; letter-spacing:.04em; }
+.ck-va-copy { font-size:.76rem; font-weight:700; color:var(--tosca-dk); cursor:pointer; background:none; border:none; padding:0; }
+.ck-qr { width:160px; height:160px; background:var(--offwhite); border-radius:12px; margin:0 auto 1rem; display:flex; align-items:center; justify-content:center; color:#aaa; font-size:.78rem; }
+.ck-steps-howto { text-align:left; font-size:.82rem; color:#555; line-height:1.7; margin-top:1.2rem; padding-top:1.2rem; border-top:1px solid var(--border); }
+.ck-steps-howto li { margin-bottom:.3rem; }
+
+/* ---- Success page ---- */
+.ck-success { text-align:center; padding:3rem var(--pad) 1rem; max-width:560px; margin:0 auto; }
+.ck-success-icon { width:72px; height:72px; border-radius:50%; background:#e6f7e9; color:#2f9e44; display:flex; align-items:center; justify-content:center; font-size:2.2rem; margin:0 auto 1.2rem; }
+.ck-success-title { font-family:'Arial Black',Arial,sans-serif; font-weight:900; font-size:1.9rem; text-transform:uppercase; color:var(--black); margin-bottom:.5rem; }
+.ck-success-sub { font-size:.88rem; color:#666; margin-bottom:1.5rem; }
+.ck-order-card { background:var(--offwhite); border-radius:14px; padding:1.2rem; text-align:left; margin-bottom:1.5rem; }
+.ck-order-row { display:flex; justify-content:space-between; font-size:.84rem; padding:.35rem 0; color:#555; }
+.ck-order-row strong { color:var(--black); }
+.ck-success-btns { display:flex; flex-direction:column; gap:.7rem; }
+
+@media (min-width:680px) {
+  .ck-row2 { grid-template-columns:1fr 1fr; }
+  .ck-hero-title { font-size:2.1rem; }
+}
+
+@media (min-width:1024px) {
+  .ck-grid { grid-template-columns:1.6fr 1fr; align-items:start; }
+  .ck-steps { margin-top:1.2rem; }
+}

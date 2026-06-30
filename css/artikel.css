@@ -1,0 +1,67 @@
+/* ============================================================
+   ARTIKEL.CSS — Halaman Artikel & Blog (listing + detail)
+   Memakai base.css, layout.css, desktop.css, belajar.css (kartu artikel).
+   ============================================================ */
+
+/* ---------- HERO ---------- */
+.ar-hero { background:var(--tosca); color:#fff; padding:2rem var(--pad) 2.5rem; text-align:center; }
+.ar-hero-title { font-family:'Arial Black',Arial,sans-serif; font-weight:900; font-size:2.3rem; text-transform:uppercase; margin:.4rem 0 1.2rem; }
+
+/* ---------- GRID LISTING ---------- */
+.ar-sec { padding:2.25rem var(--pad) 3rem; }
+.ar-grid { display:grid; grid-template-columns:1fr; gap:1.5rem; margin-top:1.4rem; }
+.ar-card { display:flex; flex-direction:column; }
+.ar-cover { aspect-ratio:16/10; border-radius:14px; margin-bottom:.8rem; background:linear-gradient(160deg,var(--tosca),var(--tosca-dk)); display:flex; align-items:center; justify-content:center; }
+.ar-cover.alt { background:linear-gradient(160deg,var(--orange),#e89e00); }
+.ar-cover img { width:42px; height:42px; object-fit:contain; filter:brightness(0) invert(1); opacity:.85; }
+.ar-title { font-family:'Arial Black',Arial,sans-serif; font-weight:900; font-size:.98rem; color:var(--black); line-height:1.25; margin:.15rem 0 .4rem; }
+.ar-excerpt { font-size:.78rem; color:var(--gray); line-height:1.55; flex:1; margin-bottom:.7rem; }
+.ar-foot { display:flex; align-items:center; justify-content:space-between; font-size:.7rem; color:var(--gray); border-top:1px solid var(--border); padding-top:.6rem; }
+.ar-foot .author { display:flex; align-items:center; gap:.35rem; }
+.ar-foot .avt { width:18px; height:18px; border-radius:50%; background:var(--orange); flex:none; }
+
+.ar-pagination { display:flex; justify-content:center; gap:.4rem; margin-top:2rem; }
+.ar-pg { width:34px; height:34px; border-radius:50%; border:1.5px solid var(--border); background:#fff; font-weight:700; font-size:.8rem; color:var(--gray); display:flex; align-items:center; justify-content:center; }
+.ar-pg.active { background:var(--tosca); border-color:var(--tosca); color:#fff; }
+
+/* ---------- DETAIL ---------- */
+.ad-hero { background:linear-gradient(160deg,var(--tosca),var(--tosca-dk)); color:#fff; padding:2.25rem var(--pad) 2rem; }
+.ad-wrap { max-width:46rem; margin:0 auto; }
+.ad-byline { display:flex; align-items:center; gap:.6rem; font-size:.78rem; opacity:.92; margin-top:.9rem; }
+.ad-byline .avt { width:30px; height:30px; border-radius:50%; background:var(--orange); flex:none; }
+
+.ad-body { max-width:46rem; margin:0 auto; padding:2.25rem var(--pad) 1rem; }
+.ad-cover { aspect-ratio:16/9; border-radius:14px; background:linear-gradient(160deg,var(--orange),#e89e00); margin-bottom:1.75rem; display:flex; align-items:center; justify-content:center; }
+.ad-cover img { width:48px; height:48px; filter:brightness(0) invert(1); opacity:.85; }
+.ad-text p { font-size:.86rem; color:#333; line-height:1.8; margin-bottom:1.1rem; }
+.ad-text h3 { font-family:'Arial Black',Arial,sans-serif; font-weight:900; font-size:1.05rem; color:var(--black); margin:1.5rem 0 .7rem; }
+.ad-quote { border-left:4px solid var(--tosca); padding:.2rem 0 .2rem 1.1rem; font-style:italic; color:#444; margin:1.4rem 0; font-size:1rem; }
+.ad-tags { display:flex; gap:.5rem; flex-wrap:wrap; margin-top:1.75rem; padding-top:1.4rem; border-top:1px solid var(--border); }
+.ad-tag { font-size:.7rem; font-weight:700; color:var(--tosca-dk); background:var(--offwhite); padding:.28rem .65rem; border-radius:999px; }
+
+.ad-author-box { display:flex; gap:.9rem; align-items:center; background:var(--offwhite); border-radius:14px; padding:1.1rem; margin-top:1.75rem; }
+.ad-author-box .avt { width:46px; height:46px; border-radius:50%; background:var(--orange); flex:none; }
+.ad-author-box .name { font-weight:700; font-size:.86rem; }
+.ad-author-box .role { font-size:.72rem; color:var(--gray); }
+
+.ad-related { padding:0 var(--pad) 3rem; max-width:1180px; margin:0 auto; }
+
+/* ============================================================
+   TABLET (≥ 680px)
+   ============================================================ */
+@media (min-width:680px) {
+  .ar-hero-title { font-size:3.2rem; }
+  .ar-grid { grid-template-columns:repeat(2,1fr); }
+  .ad-byline { font-size:.84rem; }
+}
+
+/* ============================================================
+   DESKTOP (≥ 1024px)
+   ============================================================ */
+@media (min-width:1024px) {
+  .ar-sec { padding:3rem 0; }
+  .ar-sec .wrap { max-width:1180px; margin:0 auto; }
+  .ar-grid { grid-template-columns:repeat(3,1fr); }
+  .ad-hero { padding:3rem 40px; }
+  .ad-body { padding:3rem 0 1rem; }
+}
