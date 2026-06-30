@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Keranjang — Sejarah Penebusan</title>
+<link rel="stylesheet" href="css/base.css"/>
+<link rel="stylesheet" href="css/layout.css"/>
+<link rel="stylesheet" href="css/desktop.css"/>
+<link rel="stylesheet" href="css/checkout.css"/>
+</head>
+<body>
+
+<div id="site-nav" data-active="buku"></div>
+
+<section class="ck-hero">
+  <div class="ck-hero-inner">
+    <h1 class="ck-hero-title">Keranjang Belanja</h1>
+    <div class="ck-steps">
+      <div class="ck-step active"><span class="ck-step-num">1</span>Keranjang</div>
+      <span class="ck-step-sep"></span>
+      <div class="ck-step"><span class="ck-step-num">2</span>Checkout</div>
+      <span class="ck-step-sep"></span>
+      <div class="ck-step"><span class="ck-step-num">3</span>Pembayaran</div>
+      <span class="ck-step-sep"></span>
+      <div class="ck-step"><span class="ck-step-num">4</span>Selesai</div>
+    </div>
+  </div>
+</section>
+
+<div class="ck-body">
+  <div class="ck-grid">
+
+    <!-- LIST ITEM -->
+    <div class="ck-card">
+      <p class="ck-card-title">2 Item di Keranjang</p>
+      <div id="ck-cart-list">
+        <div class="ck-item" data-price="120000">
+          <div class="ck-item-cover"><img src="assets/images/book-1.png" alt="Volume 1"/></div>
+          <div class="ck-item-body">
+            <p class="ck-item-title">Sejarah Penebusan: Awal Mula Segalanya</p>
+            <p class="ck-item-sub">Volume 1 &middot; Buku cetak + akses digital</p>
+            <p class="ck-item-price">Rp 120.000</p>
+            <button class="ck-item-remove" onclick="this.closest('.ck-item').remove(); ckUpdateTotal();">Hapus</button>
+          </div>
+          <div class="ck-item-qty">
+            <button class="ck-qty-btn" onclick="ckChangeQty(this,-1)">&minus;</button>
+            <span class="ck-qty-val">1</span>
+            <button class="ck-qty-btn" onclick="ckChangeQty(this,1)">+</button>
+          </div>
+        </div>
+
+        <div class="ck-item" data-price="120000">
+          <div class="ck-item-cover"><img src="assets/images/book-2.png" alt="Volume 2"/></div>
+          <div class="ck-item-body">
+            <p class="ck-item-title">Sejarah Penebusan: Abraham &amp; Perjanjian</p>
+            <p class="ck-item-sub">Volume 2 &middot; Buku cetak + akses digital</p>
+            <p class="ck-item-price">Rp 120.000</p>
+            <button class="ck-item-remove" onclick="this.closest('.ck-item').remove(); ckUpdateTotal();">Hapus</button>
+          </div>
+          <div class="ck-item-qty">
+            <button class="ck-qty-btn" onclick="ckChangeQty(this,-1)">&minus;</button>
+            <span class="ck-qty-val">1</span>
+            <button class="ck-qty-btn" onclick="ckChangeQty(this,1)">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="ck-promo">
+        <input type="text" placeholder="Kode promo"/>
+        <button>Pakai</button>
+      </div>
+    </div>
+
+    <!-- RINGKASAN -->
+    <div class="ck-card">
+      <p class="ck-card-title">Ringkasan Pesanan</p>
+      <div class="ck-sum-row"><span>Subtotal</span><span id="ck-subtotal">Rp 240.000</span></div>
+      <div class="ck-sum-row"><span>Ongkos Kirim</span><span>Rp 20.000</span></div>
+      <div class="ck-sum-row"><span>Diskon</span><span>&minus; Rp 0</span></div>
+      <div class="ck-sum-row total"><span>Total</span><span id="ck-total">Rp 260.000</span></div>
+      <button class="ck-btn-primary" onclick="location.href='checkout.html'">Lanjut ke Checkout</button>
+      <button class="ck-btn-ghost" onclick="location.href='buku.html'">Lanjutkan Belanja</button>
+    </div>
+
+  </div>
+</div>
+
+<div id="site-footer"></div>
+<script src="js/components.js"></script>
+<script>
+function ckChangeQty(btn, delta) {
+  var item = btn.closest('.ck-item');
+  var valEl = item.querySelector('.ck-qty-val');
+  var qty = Math.max(1, parseInt(valEl.textContent, 10) + delta);
+  valEl.textContent = qty;
+  var price = parseInt(item.getAttribute('data-price'), 10);
+  item.querySelector('.ck-item-price').textContent = 'Rp ' + (price * qty).toLocaleString('id-ID');
+  ckUpdateTotal();
+}
+function ckUpdateTotal() {
+  var items = document.querySelectorAll('#ck-cart-list .ck-item');
+  var subtotal = 0;
+  items.forEach(function (item) {
+    var price = parseInt(item.getAttribute('data-price'), 10);
+    var qty = parseInt(item.querySelector('.ck-qty-val').textContent, 10);
+    subtotal += price * qty;
+  });
+  var ongkir = items.length ? 20000 : 0;
+  document.getElementById('ck-subtotal').textContent = 'Rp ' + subtotal.toLocaleString('id-ID');
+  document.getElementById('ck-total').textContent = 'Rp ' + (subtotal + ongkir).toLocaleString('id-ID');
+  document.querySelector('.ck-card-title').textContent = items.length + ' Item di Keranjang';
+}
+</script>
+</body>
+</html>

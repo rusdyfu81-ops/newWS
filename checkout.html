@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Checkout — Sejarah Penebusan</title>
+<link rel="stylesheet" href="css/base.css"/>
+<link rel="stylesheet" href="css/layout.css"/>
+<link rel="stylesheet" href="css/desktop.css"/>
+<link rel="stylesheet" href="css/checkout.css"/>
+</head>
+<body>
+
+<div id="site-nav" data-active="buku"></div>
+
+<section class="ck-hero">
+  <div class="ck-hero-inner">
+    <h1 class="ck-hero-title">Checkout</h1>
+    <div class="ck-steps">
+      <div class="ck-step done"><span class="ck-step-num">&#10003;</span>Keranjang</div>
+      <span class="ck-step-sep"></span>
+      <div class="ck-step active"><span class="ck-step-num">2</span>Checkout</div>
+      <span class="ck-step-sep"></span>
+      <div class="ck-step"><span class="ck-step-num">3</span>Pembayaran</div>
+      <span class="ck-step-sep"></span>
+      <div class="ck-step"><span class="ck-step-num">4</span>Selesai</div>
+    </div>
+  </div>
+</section>
+
+<div class="ck-body">
+  <div class="ck-grid">
+
+    <!-- FORM -->
+    <div>
+      <div class="ck-card" style="margin-bottom:1.2rem;">
+        <p class="ck-card-title">Alamat Pengiriman</p>
+        <div class="ck-row2">
+          <div class="ck-field">
+            <label class="ck-label">Nama Lengkap</label>
+            <input class="ck-input" type="text" placeholder="Nama penerima"/>
+          </div>
+          <div class="ck-field">
+            <label class="ck-label">No. Telepon</label>
+            <input class="ck-input" type="text" placeholder="08xx xxxx xxxx"/>
+          </div>
+        </div>
+        <div class="ck-field">
+          <label class="ck-label">Email</label>
+          <input class="ck-input" type="email" placeholder="nama@email.com"/>
+        </div>
+        <div class="ck-field">
+          <label class="ck-label">Alamat Lengkap</label>
+          <textarea class="ck-textarea" rows="3" placeholder="Nama jalan, nomor rumah, RT/RW"></textarea>
+        </div>
+        <div class="ck-row2">
+          <div class="ck-field">
+            <label class="ck-label">Kota</label>
+            <input class="ck-input" type="text" placeholder="Kota"/>
+          </div>
+          <div class="ck-field">
+            <label class="ck-label">Kode Pos</label>
+            <input class="ck-input" type="text" placeholder="Kode pos"/>
+          </div>
+        </div>
+      </div>
+
+      <div class="ck-card">
+        <p class="ck-card-title">Metode Pembayaran</p>
+
+        <label class="ck-pay-opt selected">
+          <input type="radio" name="pay" checked/>
+          <div>
+            <p class="ck-pay-opt-label">Transfer Bank / Virtual Account</p>
+            <p class="ck-pay-opt-sub">BCA, BNI, Mandiri, Permata</p>
+          </div>
+        </label>
+
+        <label class="ck-pay-opt">
+          <input type="radio" name="pay"/>
+          <div>
+            <p class="ck-pay-opt-label">E-Wallet</p>
+            <p class="ck-pay-opt-sub">GoPay, OVO, DANA, ShopeePay</p>
+          </div>
+        </label>
+
+        <label class="ck-pay-opt">
+          <input type="radio" name="pay"/>
+          <div>
+            <p class="ck-pay-opt-label">QRIS</p>
+            <p class="ck-pay-opt-sub">Scan dari aplikasi bank/e-wallet apa saja</p>
+          </div>
+        </label>
+
+        <label class="ck-pay-opt">
+          <input type="radio" name="pay"/>
+          <div>
+            <p class="ck-pay-opt-label">Kartu Kredit/Debit</p>
+            <p class="ck-pay-opt-sub">Visa, Mastercard, JCB</p>
+          </div>
+        </label>
+      </div>
+    </div>
+
+    <!-- RINGKASAN -->
+    <div class="ck-card">
+      <p class="ck-card-title">Ringkasan Pesanan</p>
+      <div class="ck-item" style="border-bottom:1px solid var(--border);">
+        <div class="ck-item-cover"><img src="assets/images/book-1.png" alt="Volume 1"/></div>
+        <div class="ck-item-body">
+          <p class="ck-item-title">Sejarah Penebusan: Awal Mula Segalanya</p>
+          <p class="ck-item-sub">Qty 1 &middot; Rp 120.000</p>
+        </div>
+      </div>
+      <div class="ck-item">
+        <div class="ck-item-cover"><img src="assets/images/book-2.png" alt="Volume 2"/></div>
+        <div class="ck-item-body">
+          <p class="ck-item-title">Sejarah Penebusan: Abraham &amp; Perjanjian</p>
+          <p class="ck-item-sub">Qty 1 &middot; Rp 120.000</p>
+        </div>
+      </div>
+
+      <div class="ck-sum-row"><span>Subtotal</span><span>Rp 240.000</span></div>
+      <div class="ck-sum-row"><span>Ongkos Kirim</span><span>Rp 20.000</span></div>
+      <div class="ck-sum-row total"><span>Total</span><span>Rp 260.000</span></div>
+
+      <button class="ck-btn-primary" onclick="location.href='pembayaran.html'">Lanjut ke Pembayaran</button>
+      <button class="ck-btn-ghost" onclick="location.href='keranjang.html'">Kembali ke Keranjang</button>
+    </div>
+
+  </div>
+</div>
+
+<div id="site-footer"></div>
+<script src="js/components.js"></script>
+<script>
+document.querySelectorAll('.ck-pay-opt').forEach(function (opt) {
+  opt.addEventListener('click', function () {
+    document.querySelectorAll('.ck-pay-opt').forEach(function (o) { o.classList.remove('selected'); });
+    opt.classList.add('selected');
+    opt.querySelector('input').checked = true;
+  });
+});
+</script>
+</body>
+</html>

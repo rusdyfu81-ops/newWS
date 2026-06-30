@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Donasi Berhasil — Sejarah Penebusan</title>
+<link rel="stylesheet" href="css/base.css"/>
+<link rel="stylesheet" href="css/layout.css"/>
+<link rel="stylesheet" href="css/desktop.css"/>
+<link rel="stylesheet" href="css/checkout.css"/>
+</head>
+<body>
+
+<div id="site-nav" data-active="donasi"></div>
+
+<section class="ck-hero narrow">
+  <div class="ck-hero-inner">
+    <h1 class="ck-hero-title">Donasi Berhasil</h1>
+    <div class="ck-steps">
+      <div class="ck-step done"><span class="ck-step-num">&#10003;</span>Donasi</div>
+      <span class="ck-step-sep"></span>
+      <div class="ck-step done"><span class="ck-step-num">&#10003;</span>Pembayaran</div>
+      <span class="ck-step-sep"></span>
+      <div class="ck-step active"><span class="ck-step-num">3</span>Selesai</div>
+    </div>
+  </div>
+</section>
+
+<div class="ck-success">
+  <div class="ck-success-icon">&#10003;</div>
+  <h2 class="ck-success-title">Terima Kasih!</h2>
+  <p class="ck-success-sub">Donasi Anda sedang diverifikasi. Bukti donasi akan dikirim ke email Anda setelah pembayaran terkonfirmasi.</p>
+
+  <div class="ck-order-card">
+    <div class="ck-order-row"><span>No. Donasi</span><strong>#DN-20260630-0089</strong></div>
+    <div class="ck-order-row"><span>Tanggal</span><strong>30 Juni 2026</strong></div>
+    <div class="ck-order-row"><span>Frekuensi</span><strong id="dn-s-freq">Bulanan</strong></div>
+    <div class="ck-order-row"><span>Metode Pembayaran</span><strong>VA BCA</strong></div>
+    <div class="ck-order-row"><span>Status</span><strong style="color:#b07900;">Menunggu Verifikasi</strong></div>
+    <div class="ck-order-row"><span>Total Donasi</span><strong id="dn-s-amount">Rp 100.000</strong></div>
+  </div>
+
+  <div class="ck-success-btns">
+    <button class="ck-btn-primary" style="margin-top:0;" onclick="location.href='donasi.html#transparansi'">Lihat Dampak Donasi</button>
+    <button class="ck-btn-ghost" style="margin-top:0;" onclick="location.href='donasi.html'">Donasi Lagi</button>
+    <button class="ck-btn-ghost" style="margin-top:0;border-color:var(--border);color:#777;" onclick="location.href='index.html'">Kembali ke Beranda</button>
+  </div>
+</div>
+
+<div id="site-footer"></div>
+<script src="js/components.js"></script>
+<script>
+(function () {
+  var params = new URLSearchParams(window.location.search);
+  var amount = parseInt(params.get('amount'), 10) || 100000;
+  var freq = params.get('freq') || 'Bulanan';
+  document.getElementById('dn-s-amount').textContent = 'Rp ' + amount.toLocaleString('id-ID');
+  document.getElementById('dn-s-freq').textContent = freq;
+})();
+</script>
+</body>
+</html>

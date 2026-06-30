@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Belajar — Sejarah Penebusan</title>
+<link rel="stylesheet" href="css/base.css"/>
+<link rel="stylesheet" href="css/layout.css"/>
+<link rel="stylesheet" href="css/desktop.css"/>
+<link rel="stylesheet" href="css/komunitas.css"/>
+<link rel="stylesheet" href="css/belajar.css"/>
+</head>
+<body>
+
+<div id="site-nav" data-active="belajar"></div>
+
+<!-- HERO + SEARCH -->
+<section class="bl-hero">
+  <p class="eyebrow" style="opacity:.85;">Ruang Member</p>
+  <h1 class="bl-hero-title">Ruang Belajar</h1>
+  <div class="bl-search">
+    <input type="text" placeholder="Cari topik, tag, judul..."/>
+    <button>Cari</button>
+  </div>
+</section>
+
+<!-- SEGMEN 1: ARTIKEL & BLOG (penyambung) -->
+<section class="bl-sec" style="background:var(--offwhite);">
+  <div class="wrap">
+    <div class="bl-sec-head">
+      <div>
+        <p class="eyebrow bl-eyebrow">Artikel &amp; Blog &middot; bacaan pendamping</p>
+        <h2 class="bl-sec-title">Renungan &amp; Wawasan Terbaru</h2>
+        <p class="bl-sec-sub">Artikel singkat seputar tema Sejarah Penebusan, refleksi, dan tanya-jawab seputar iman untuk menemani perjalanan belajarmu.</p>
+      </div>
+    </div>
+
+    <div class="art-grid-wrap">
+      <article class="art-feat" onclick="location.href='artikel-detail.html'" style="cursor:pointer;">
+        <div class="art-feat-cover"><img src="assets/icons/pelajari_icon.png" alt=""/></div>
+        <span class="art-cat">Refleksi</span>
+        <h3 class="art-feat-title">Mengapa Kita Perlu Membaca Alkitab sebagai Satu Cerita Besar</h3>
+        <p class="art-feat-excerpt">Banyak dari kita membaca Alkitab secara terpisah-pisah. Artikel ini mengajak melihat benang merah Sejarah Penebusan dari Kejadian sampai Wahyu.</p>
+        <div class="art-byline"><span class="avt"></span><span>oleh Tim Penulis &middot; 6 menit baca</span></div>
+      </article>
+
+      <div class="art-list">
+        <article class="art-row" onclick="location.href='artikel-detail.html'" style="cursor:pointer;">
+          <div class="art-row-cover"><img src="assets/icons/temukan_icon.png" alt=""/></div>
+          <div>
+            <span class="art-row-cat">Tanya-Jawab</span>
+            <p class="art-row-title">Apa Beda Janji &amp; Perjanjian dalam Alkitab?</p>
+            <p class="art-row-meta">4 menit baca</p>
+          </div>
+        </article>
+        <article class="art-row" onclick="location.href='artikel-detail.html'" style="cursor:pointer;">
+          <div class="art-row-cover"><img src="assets/icons/bertumbuh_icon.png" alt=""/></div>
+          <div>
+            <span class="art-row-cat">Pewarisan Iman</span>
+            <p class="art-row-title">3 Cara Mengenalkan Kisah Keluaran ke Anak</p>
+            <p class="art-row-meta">5 menit baca</p>
+          </div>
+        </article>
+        <article class="art-row" onclick="location.href='artikel-detail.html'" style="cursor:pointer;">
+          <div class="art-row-cover"><img src="assets/icons/reading_journey_icon.png" alt=""/></div>
+          <div>
+            <span class="art-row-cat">Renungan</span>
+            <p class="art-row-title">Belajar Setia dari Perjalanan Bait Suci</p>
+            <p class="art-row-meta">3 menit baca</p>
+          </div>
+        </article>
+      </div>
+    </div>
+
+    <div class="bl-sec-foot"><button class="btn-tosca-pill" onclick="location.href='artikel.html'">Lihat semua artikel</button></div>
+  </div>
+</section>
+
+<!-- SEGMEN 2: PELAJARAN -->
+<section class="bl-sec">
+  <div class="wrap">
+    <div class="bl-sec-head">
+      <div>
+        <p class="eyebrow bl-eyebrow">Pelajaran &middot; untuk pencari &amp; pembelajar</p>
+        <h2 class="bl-sec-title">Sejarah Penebusan &mdash; 12 Volume</h2>
+        <p class="bl-sec-sub">Pahami Alkitab sebagai satu cerita yang utuh. Tiap volume berisi 12 episode: video, audio, tools interaktif, dan worksheet.</p>
+      </div>
+    </div>
+
+    <div class="vol-grid">
+      <article class="vol-card" onclick="location.href='belajar-detail.html'" style="cursor:pointer;">
+        <div class="vol-cover">
+          <img src="assets/images/book-1.png" alt="Volume 1"/>
+          <span class="vol-pill free"><span class="dot"></span>Mulai gratis</span>
+        </div>
+        <div class="vol-media">
+          <span class="vol-chip"><img src="assets/icons/video_pelajaran_icon.png" alt=""/>Video</span>
+          <span class="vol-chip"><img src="assets/icons/podcast_icon.png" alt=""/>Audio</span>
+          <span class="vol-chip"><img src="assets/icons/worksheet_pdf_icon.png" alt=""/>PDF</span>
+        </div>
+        <p class="vol-eyebrow">Volume 1</p>
+        <p class="vol-name">Permulaan Sejarah Penebusan</p>
+        <p class="vol-meta">12 episode &middot; ~3 jam</p>
+      </article>
+
+      <article class="vol-card" onclick="location.href='belajar-detail.html'" style="cursor:pointer;">
+        <div class="vol-cover"><span class="volnum">VOL 2</span><span class="vol-pill lock"><span class="dot"></span>Member</span></div>
+        <div class="vol-media">
+          <span class="vol-chip"><img src="assets/icons/video_pelajaran_icon.png" alt=""/>Video</span>
+          <span class="vol-chip"><img src="assets/icons/podcast_icon.png" alt=""/>Audio</span>
+          <span class="vol-chip"><img src="assets/icons/worksheet_pdf_icon.png" alt=""/>PDF</span>
+        </div>
+        <p class="vol-eyebrow">Volume 2</p>
+        <p class="vol-name">Abraham &amp; Perjanjian</p>
+        <p class="vol-meta">12 episode &middot; ~3 jam</p>
+      </article>
+
+      <article class="vol-card" onclick="location.href='belajar-detail.html'" style="cursor:pointer;">
+        <div class="vol-cover"><span class="volnum">VOL 3</span><span class="vol-pill lock"><span class="dot"></span>Member</span></div>
+        <div class="vol-media">
+          <span class="vol-chip"><img src="assets/icons/video_pelajaran_icon.png" alt=""/>Video</span>
+          <span class="vol-chip"><img src="assets/icons/podcast_icon.png" alt=""/>Audio</span>
+          <span class="vol-chip"><img src="assets/icons/worksheet_pdf_icon.png" alt=""/>PDF</span>
+        </div>
+        <p class="vol-eyebrow">Volume 3</p>
+        <p class="vol-name">Keluaran &amp; Pembebasan</p>
+        <p class="vol-meta">12 episode &middot; ~3 jam</p>
+      </article>
+
+      <article class="vol-card" onclick="location.href='belajar-detail.html'" style="cursor:pointer;">
+        <div class="vol-cover"><span class="volnum">VOL 4</span><span class="vol-pill lock"><span class="dot"></span>Member</span></div>
+        <div class="vol-media">
+          <span class="vol-chip"><img src="assets/icons/video_pelajaran_icon.png" alt=""/>Video</span>
+          <span class="vol-chip"><img src="assets/icons/podcast_icon.png" alt=""/>Audio</span>
+          <span class="vol-chip"><img src="assets/icons/worksheet_pdf_icon.png" alt=""/>PDF</span>
+        </div>
+        <p class="vol-eyebrow">Volume 4</p>
+        <p class="vol-name">Bait Suci &amp; Kerajaan</p>
+        <p class="vol-meta">12 episode &middot; ~3 jam</p>
+      </article>
+    </div>
+
+    <div class="bl-sec-foot"><button class="btn-tosca-pill" onclick="location.href='belajar-detail.html'">Lihat semua 12 volume</button></div>
+  </div>
+</section>
+
+<!-- SEGMEN 3: PEWARISAN IMAN -->
+<section class="bl-sec" style="background:var(--offwhite);">
+  <div class="wrap">
+    <div class="bl-sec-head">
+      <div>
+        <p class="eyebrow bl-eyebrow">Pewarisan Iman &middot; untuk orang tua &amp; guru</p>
+        <h2 class="bl-sec-title">Wariskan Iman ke Generasi Berikut</h2>
+        <p class="bl-sec-sub">Bahan mengajar siap pakai: pertanyaan anak, craft, dan materi per jenjang. <span style="color:#b07900;font-weight:700;">Materi sedang disiapkan.</span></p>
+      </div>
+    </div>
+
+    <div class="pew-grid">
+      <article class="pew-card">
+        <div class="pew-ico"><img src="assets/icons/pelajari_icon.png" alt=""/></div>
+        <p class="pew-name">Anak Bertanya</p>
+        <p class="pew-desc">Jawaban untuk pertanyaan iman anak yang sulit.</p>
+        <div class="pew-foot"><span class="pew-tag">Tanya-Jawab</span><span class="pew-soon">Segera</span></div>
+      </article>
+
+      <article class="pew-card">
+        <div class="pew-ico"><img src="assets/icons/temukan_icon.png" alt=""/></div>
+        <p class="pew-name">Art &amp; Craft</p>
+        <p class="pew-desc">Prakarya yang bisa diunduh &amp; dicetak untuk anak.</p>
+        <div class="pew-foot"><span class="pew-tag">Unduhan</span><span class="pew-soon">Segera</span></div>
+      </article>
+
+      <article class="pew-card">
+        <div class="pew-ico"><img src="assets/icons/bertumbuh_icon.png" alt=""/></div>
+        <p class="pew-name">Sekolah Minggu</p>
+        <p class="pew-desc">Panduan mengajar untuk kelas Sekolah Minggu.</p>
+        <div class="pew-foot"><span class="pew-tag">Jenjang</span><span class="pew-soon">Segera</span></div>
+      </article>
+
+      <article class="pew-card">
+        <div class="pew-ico"><img src="assets/icons/reading_journey_icon.png" alt=""/></div>
+        <p class="pew-name">Sekolah Dasar</p>
+        <p class="pew-desc">Materi pewarisan iman untuk anak usia SD.</p>
+        <div class="pew-foot"><span class="pew-tag">Jenjang</span><span class="pew-soon">Segera</span></div>
+      </article>
+
+      <article class="pew-card">
+        <div class="pew-ico"><img src="assets/icons/telibat_icon.png" alt=""/></div>
+        <p class="pew-name">SMP</p>
+        <p class="pew-desc">Bahan diskusi &amp; pendalaman untuk remaja SMP.</p>
+        <div class="pew-foot"><span class="pew-tag">Jenjang</span><span class="pew-soon">Segera</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="js/components.js"></script>
+</body>
+</html>

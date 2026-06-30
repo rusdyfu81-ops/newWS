@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Pembayaran — Sejarah Penebusan</title>
+<link rel="stylesheet" href="css/base.css"/>
+<link rel="stylesheet" href="css/layout.css"/>
+<link rel="stylesheet" href="css/desktop.css"/>
+<link rel="stylesheet" href="css/checkout.css"/>
+</head>
+<body>
+
+<div id="site-nav" data-active="buku"></div>
+
+<section class="ck-hero narrow">
+  <div class="ck-hero-inner">
+    <h1 class="ck-hero-title">Pembayaran</h1>
+    <div class="ck-steps">
+      <div class="ck-step done"><span class="ck-step-num">&#10003;</span>Keranjang</div>
+      <span class="ck-step-sep"></span>
+      <div class="ck-step done"><span class="ck-step-num">&#10003;</span>Checkout</div>
+      <span class="ck-step-sep"></span>
+      <div class="ck-step active"><span class="ck-step-num">3</span>Pembayaran</div>
+      <span class="ck-step-sep"></span>
+      <div class="ck-step"><span class="ck-step-num">4</span>Selesai</div>
+    </div>
+  </div>
+</section>
+
+<div class="ck-body" style="max-width:560px;">
+  <div class="ck-card">
+    <div class="ck-pay-box">
+      <span class="ck-timer">Selesaikan dalam 23:59:12</span>
+
+      <p class="ck-va-label" style="margin-top:0;">Total Pembayaran</p>
+      <p class="ck-va-num" style="font-size:1.7rem;">Rp 260.000</p>
+
+      <div class="ck-va">
+        <p class="ck-va-label">Transfer Virtual Account &middot; BCA</p>
+        <p class="ck-va-num" id="ck-va-number">8808 1234 5678 9012</p>
+        <button class="ck-va-copy" onclick="navigator.clipboard && navigator.clipboard.writeText('880812345678901'); this.textContent='Tersalin!';">Salin Nomor</button>
+      </div>
+
+      <ol class="ck-steps-howto">
+        <li>1. Buka aplikasi mobile banking atau ATM BCA Anda.</li>
+        <li>2. Pilih menu Transfer &rarr; Virtual Account.</li>
+        <li>3. Masukkan nomor Virtual Account di atas.</li>
+        <li>4. Periksa detail pesanan, lalu konfirmasi pembayaran.</li>
+        <li>5. Simpan bukti transfer sebagai referensi.</li>
+      </ol>
+    </div>
+
+    <button class="ck-btn-primary" onclick="location.href='pesanan-sukses.html'">Saya Sudah Bayar</button>
+    <button class="ck-btn-ghost" onclick="location.href='checkout.html'">Ganti Metode Pembayaran</button>
+  </div>
+</div>
+
+<div id="site-footer"></div>
+<script src="js/components.js"></script>
+</body>
+</html>

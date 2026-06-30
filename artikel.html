@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Artikel &amp; Blog — Sejarah Penebusan</title>
+<link rel="stylesheet" href="css/base.css"/>
+<link rel="stylesheet" href="css/layout.css"/>
+<link rel="stylesheet" href="css/desktop.css"/>
+<link rel="stylesheet" href="css/belajar.css"/>
+<link rel="stylesheet" href="css/artikel.css"/>
+</head>
+<body>
+
+<div id="site-nav" data-active="artikel"></div>
+
+<section class="ar-hero">
+  <p class="eyebrow" style="opacity:.85;">Bacaan</p>
+  <h1 class="ar-hero-title">Artikel &amp; Blog</h1>
+  <div class="bl-search">
+    <input type="text" placeholder="Cari artikel, topik, tag..."/>
+    <button>Cari</button>
+  </div>
+</section>
+
+<section class="ar-sec">
+  <div class="wrap">
+    <p class="eyebrow bl-eyebrow">Semua Artikel</p>
+    <h2 class="bl-sec-title">Jelajahi Bacaan Kami</h2>
+    <p class="bl-sec-sub">Renungan, tanya-jawab iman, dan wawasan seputar Sejarah Penebusan untuk menemani perjalanan belajarmu.</p>
+
+    <div class="bl-filters" style="margin-top:1.25rem;">
+      <span class="bl-chip active">Semua</span>
+      <span class="bl-chip">Refleksi</span>
+      <span class="bl-chip">Tanya-Jawab</span>
+      <span class="bl-chip">Pewarisan Iman</span>
+      <span class="bl-chip">Renungan</span>
+      <span class="bl-chip">Studi Alkitab</span>
+    </div>
+
+    <div class="ar-grid">
+      <article class="ar-card" onclick="location.href='artikel-detail.html'" style="cursor:pointer;">
+        <div class="ar-cover"><img src="assets/icons/pelajari_icon.png" alt=""/></div>
+        <span class="art-cat">Refleksi</span>
+        <h3 class="ar-title">Mengapa Kita Perlu Membaca Alkitab sebagai Satu Cerita Besar</h3>
+        <p class="ar-excerpt">Banyak dari kita membaca Alkitab secara terpisah-pisah. Artikel ini mengajak melihat benang merah Sejarah Penebusan.</p>
+        <div class="ar-foot"><span class="author"><span class="avt"></span>Tim Penulis</span><span>6 menit</span></div>
+      </article>
+
+      <article class="ar-card" onclick="location.href='artikel-detail.html'" style="cursor:pointer;">
+        <div class="ar-cover alt"><img src="assets/icons/temukan_icon.png" alt=""/></div>
+        <span class="art-cat">Tanya-Jawab</span>
+        <h3 class="ar-title">Apa Beda Janji &amp; Perjanjian dalam Alkitab?</h3>
+        <p class="ar-excerpt">Dua istilah ini sering tertukar. Mari kita telusuri akar maknanya dalam Sejarah Penebusan.</p>
+        <div class="ar-foot"><span class="author"><span class="avt"></span>Abraham Park</span><span>4 menit</span></div>
+      </article>
+
+      <article class="ar-card" onclick="location.href='artikel-detail.html'" style="cursor:pointer;">
+        <div class="ar-cover"><img src="assets/icons/bertumbuh_icon.png" alt=""/></div>
+        <span class="art-cat">Pewarisan Iman</span>
+        <h3 class="ar-title">3 Cara Mengenalkan Kisah Keluaran ke Anak</h3>
+        <p class="ar-excerpt">Tips praktis bagi orang tua untuk menyampaikan kisah pembebasan Israel dengan cara yang menarik.</p>
+        <div class="ar-foot"><span class="author"><span class="avt"></span>Tim Penulis</span><span>5 menit</span></div>
+      </article>
+
+      <article class="ar-card" onclick="location.href='artikel-detail.html'" style="cursor:pointer;">
+        <div class="ar-cover alt"><img src="assets/icons/reading_journey_icon.png" alt=""/></div>
+        <span class="art-cat">Renungan</span>
+        <h3 class="ar-title">Belajar Setia dari Perjalanan Bait Suci</h3>
+        <p class="ar-excerpt">Sebuah renungan singkat tentang kesetiaan Tuhan yang tergambar lewat sejarah Bait Suci.</p>
+        <div class="ar-foot"><span class="author"><span class="avt"></span>Tim Penulis</span><span>3 menit</span></div>
+      </article>
+
+      <article class="ar-card" onclick="location.href='artikel-detail.html'" style="cursor:pointer;">
+        <div class="ar-cover"><img src="assets/icons/worksheet_pdf_icon.png" alt=""/></div>
+        <span class="art-cat">Studi Alkitab</span>
+        <h3 class="ar-title">Panduan Singkat Membaca Kitab Kejadian 1-11</h3>
+        <p class="ar-excerpt">Garis besar dan poin penting sebelum kamu mulai Volume 1: Permulaan Sejarah Penebusan.</p>
+        <div class="ar-foot"><span class="author"><span class="avt"></span>Abraham Park</span><span>7 menit</span></div>
+      </article>
+
+      <article class="ar-card" onclick="location.href='artikel-detail.html'" style="cursor:pointer;">
+        <div class="ar-cover alt"><img src="assets/icons/podcast_icon.png" alt=""/></div>
+        <span class="art-cat">Refleksi</span>
+        <h3 class="ar-title">Mendengarkan Alkitab: Mengapa Format Audio Membantu</h3>
+        <p class="ar-excerpt">Belajar sambil beraktivitas? Ini alasan kenapa versi audio bisa jadi pelengkap belajarmu.</p>
+        <div class="ar-foot"><span class="author"><span class="avt"></span>Tim Penulis</span><span>4 menit</span></div>
+      </article>
+    </div>
+
+    <div class="ar-pagination">
+      <span class="ar-pg active">1</span>
+      <span class="ar-pg">2</span>
+      <span class="ar-pg">3</span>
+      <span class="ar-pg">&rarr;</span>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="js/components.js"></script>
+<script>
+document.querySelectorAll('.bl-chip').forEach(function (chip) {
+  chip.addEventListener('click', function () {
+    document.querySelectorAll('.bl-chip').forEach(function (c) { c.classList.remove('active'); });
+    chip.classList.add('active');
+  });
+});
+</script>
+</body>
+</html>
